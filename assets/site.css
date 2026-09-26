@@ -129,3 +129,9 @@ a.onground:hover { text-decoration-color: var(--on-ground); }
 .keys { display: flex; flex-wrap: wrap; gap: 10px; }
 .keys span { background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 8px 16px; font-size: 15px; }
 .keys span::before { content: "\2713\00a0\00a0"; color: var(--accent); font-weight: 700; }
+
+/* The download code, for a visitor on a computer: shown only where there is a mouse, never on a phone. */
+.scan { display: none; align-items: center; gap: 16px; margin-top: 22px; }
+.scan img { width: 116px; height: 116px; background: #fff; padding: 8px; border-radius: 10px; }
+.scan p { margin: 0; font-size: 14px; opacity: .9; }
+@media (hover: hover) and (pointer: fine) { .scan { display: flex; } }

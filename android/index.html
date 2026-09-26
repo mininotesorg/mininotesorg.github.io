@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Download Mininotes for Android</title>
+<meta name="theme-color" content="#285646">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<div class="hero" style="min-height:100vh">
+  <div class="wrap" style="display:block;max-width:640px">
+    <a class="brand" href="../"><img src="../assets/mininotes-512.png" alt="">Mininotes</a>
+    <h1 style="margin-top:36px">Downloading Mininotes for Android…</h1>
+    <p class="lead" id="said">Finding the newest version.</p>
+    <p class="small">If nothing starts, <a class="onground" id="fallback" href="https://github.com/mininotesorg/mininotes/releases/latest">open the latest release</a> and tap the .apk file.</p>
+  </div>
+</div>
+<script>
+  // The newest release's Android file, by its own versioned name (Mininotes-0.1.001.apk), fetched from GitHub
+  // and started at once. The only request this page makes is that one, to GitHub.
+  fetch("https://api.github.com/repos/mininotesorg/mininotes/releases/latest")
+    .then(function(r){return r.json();})
+    .then(function(release){
+      var file=(release.assets||[]).filter(function(a){return /^Mininotes-[0-9.]+\.apk$/.test(a.name);})[0];
+      if(!file)return;
+      document.getElementById("said").textContent="Mininotes "+release.tag_name.replace(/^v/,"")+" - "+file.name;
+      document.getElementById("fallback").href=file.browser_download_url;
+      location.replace(file.browser_download_url);
+    })
+    .catch(function(){});
+</script>
+</body>
+</html>
