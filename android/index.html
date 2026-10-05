@@ -20,16 +20,24 @@
 <script>
   // The newest release's Android file, by its own versioned name (Mininotes-0.1.001.apk), fetched from GitHub
   // and started at once. The only request this page makes is that one, to GitHub.
-  fetch("https://api.github.com/repos/mininotesorg/mininotes/releases/latest")
+  // The newest release that has the file: while a new release is still being built its file is not up yet (the Windows
+  // one takes ten minutes longer), and then the one before it is the newest there is.
+  fetch("https://api.github.com/repos/mininotesorg/mininotes/releases?per_page=10")
     .then(function(r){return r.json();})
-    .then(function(release){
-      var file=(release.assets||[]).filter(function(a){return /^Mininotes-[0-9.]+\.apk$/.test(a.name);})[0];
-      if(!file)return;
-      document.getElementById("said").textContent="Mininotes "+release.tag_name.replace(/^v/,"")+" - "+file.name;
-      document.getElementById("fallback").href=file.browser_download_url;
-      location.replace(file.browser_download_url);
+    .then(function(releases){
+      for(var i=0;i<releases.length;i++){
+        var release=releases[i];
+        if(release.draft||release.prerelease)continue;
+        var file=(release.assets||[]).filter(function(a){return /^Mininotes-[0-9.]+\.apk$/.test(a.name);})[0];
+        if(!file)continue;
+        document.getElementById("said").textContent="Mininotes "+release.tag_name.replace(/^v/,"")+" · "+file.name;
+        document.getElementById("fallback").href=file.browser_download_url;
+        location.replace(file.browser_download_url);
+        return;
+      }
+      document.getElementById("said").textContent="Could not find the file. Use the link below.";
     })
-    .catch(function(){});
+    .catch(function(){document.getElementById("said").textContent="Could not reach GitHub. Use the link below.";});
 </script>
 </body>
 </html>
