@@ -33,9 +33,10 @@
       <h1>A private paper pad for the people close to you.</h1>
       <p class="lead">From the grocery list to your biggest project. Sealed from device to device over Maxima, the communication layer of <a class="onground" href="https://minima.global">Minima</a>.</p>
       <div class="actions" id="download">
-        <a class="button" href="android/">Download for Android</a>
-        <a class="button plain" href="windows/">Download for Windows</a>
+        <a class="button" id="get-android" href="https://github.com/mininotesorg/mininotes/releases/latest/download/Mininotes.apk">Download for Android</a>
+        <a class="button plain" id="get-windows" href="https://github.com/mininotesorg/mininotes/releases/latest/download/Mininotes-Windows.zip">Download for Windows</a>
       </div>
+      <p class="small" id="which">The newest version, straight from <a class="onground" href="https://github.com/mininotesorg/mininotes/releases">the releases on GitHub</a>.</p>
       <div class="scan">
         <img src="assets/android-qr.png" alt="A code to scan with an Android phone: it downloads Mininotes">
         <p>On your Android phone, scan this code:<br>it downloads Mininotes in one step.</p>
@@ -135,5 +136,32 @@
   </div>
 </footer>
 
+<script>
+  // The two buttons download at once, from this page. They start as the permanent links to the newest release; then
+  // each is pointed at the newest release that has its file, by its versioned name, and the line under them says
+  // which version that is. While a release is still being built its Windows file is not up yet, and the one before
+  // is what the button gives. The only request this page makes is this one, to GitHub.
+  fetch("https://api.github.com/repos/mininotesorg/mininotes/releases?per_page=10")
+    .then(function(r){return r.json();})
+    .then(function(releases){
+      function newest(pattern){
+        for(var i=0;i<releases.length;i++){
+          if(releases[i].draft||releases[i].prerelease)continue;
+          var file=(releases[i].assets||[]).filter(function(a){return pattern.test(a.name);})[0];
+          if(file)return {version:releases[i].tag_name.replace(/^v/,""),url:file.browser_download_url};
+        }
+        return null;
+      }
+      var android=newest(/^Mininotes-[0-9.]+\.apk$/),windows=newest(/^Mininotes-Windows-[0-9.]+\.zip$/);
+      if(android)document.getElementById("get-android").href=android.url;
+      if(windows)document.getElementById("get-windows").href=windows.url;
+      if(!android&&!windows)return;
+      var said=android&&windows&&android.version===windows.version?"Version "+android.version
+        :[android?"Android "+android.version:"",windows?"Windows "+windows.version:""].filter(Boolean).join(" · ");
+      var line=document.getElementById("which"),link=line.querySelector("a");
+      line.textContent=said+" · ";link.textContent="all releases on GitHub";line.appendChild(link);
+    })
+    .catch(function(){});
+</script>
 </body>
 </html>
