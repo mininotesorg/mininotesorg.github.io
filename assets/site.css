@@ -13,18 +13,7 @@
   --radius: 14px;
   color-scheme: light;
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-    --paper: #151b18;
-    --card: #1c2420;
-    --ink: #ece8dc;
-    --quiet: #a3ada6;
-    --line: #2c3731;
-    --rule: #25302a;
-    --accent: #8cc5ad;
-    color-scheme: dark;
-  }
-}
+/* One look, day and night: the cream paper under the green. A near-black page at night read as gloomy (the owner, 2026-10-05). */
 
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
@@ -74,6 +63,11 @@ img { max-width: 100%; }
 .pad li { line-height: 36px; font-size: 17px; }
 .pad li s { color: #7c857f; }
 .pad .who { font-size: 13px; color: #5b665f; margin: -6px 0 10px; }
+
+/* The app itself, recorded on a phone: a frame round the video, nothing over it */
+.phone { margin: 0 auto; width: min(300px, 78vw); padding: 10px; background: #fbf9f3; border-radius: 34px;
+  box-shadow: 0 22px 48px rgba(0,0,0,.28), 0 0 0 1px rgba(245,241,230,.5); }
+.phone video { display: block; width: 100%; aspect-ratio: 540 / 1100; border-radius: 26px; background: #f5f1e6; }
 
 /* Sections */
 section { padding: 56px 0; border-bottom: 1px solid var(--line); }
@@ -135,3 +129,17 @@ a.onground:hover { text-decoration-color: var(--on-ground); }
 .scan img { width: 116px; height: 116px; background: #fff; padding: 8px; border-radius: 10px; }
 .scan p { margin: 0; font-size: 14px; opacity: .9; }
 @media (hover: hover) and (pointer: fine) { .scan { display: flex; } }
+
+/* The roadmap: a line down the left, a dot for each step. Done is filled, now is ringed, ahead is hollow. */
+.road { list-style: none; margin: 0; padding: 0 0 0 28px; position: relative; max-width: 44em; }
+.road::before { content: ""; position: absolute; left: 7px; top: 8px; bottom: 8px; width: 2px; background: var(--line); }
+.road li { position: relative; padding: 0 0 26px; }
+.road li:last-child { padding-bottom: 0; }
+.road li::before { content: ""; position: absolute; left: -28px; top: 5px; width: 12px; height: 12px; border-radius: 50%;
+  background: var(--paper); border: 2px solid var(--quiet); }
+.road li.done::before { background: var(--accent); border-color: var(--accent); }
+.road li.now::before { background: var(--paper); border-color: var(--accent); box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 25%, transparent); }
+.road .when { font-size: 13px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--quiet); }
+.road li.now .when { color: var(--accent); }
+.road h3 { margin: 2px 0 4px; font-size: 19px; }
+.road p { margin: 0; color: var(--quiet); font-size: 16px; }
