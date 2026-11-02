@@ -105,6 +105,7 @@ code, .address {
 .contact { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: start; }
 .qr { background: #fff; padding: 12px; border-radius: 12px; width: 220px; }
 .note { color: var(--quiet); font-size: 15px; }
+.own-relay { margin: 22px 0 0; }
 
 footer { background: var(--ground); color: var(--on-ground); padding: 28px 0; font-size: 15px; }
 footer a { color: var(--on-ground); }
