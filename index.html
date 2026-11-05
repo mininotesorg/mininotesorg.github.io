@@ -49,7 +49,8 @@
             <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4.5" width="16" height="11" rx="1.6"/><path d="M2 19.5h20"/></svg>
             <p>Download, then open it.</p>
           </div>
-          <a class="button" id="get-windows" href="https://github.com/mininotesorg/mininotes/releases/latest/download/Mininotes-Windows.zip">Download for Windows</a>
+          <a class="button" id="get-windows" href="https://github.com/mininotesorg/mininotes/releases/latest/download/Mininotes-Windows.msi">Download for Windows</a>
+          <p class="small">The installer. A zip to extract anywhere, and the checksums, are on <a class="onground" href="https://github.com/mininotesorg/mininotes/releases/latest">GitHub</a>.</p>
         </div>
       </div>
       <p class="small" id="which">The newest version, straight from <a class="onground" href="https://github.com/mininotesorg/mininotes/releases">the releases on GitHub</a>.</p>
@@ -72,7 +73,7 @@
       <div class="card"><h3>You hold the keys</h3><p>Your address is a key made on your device and kept there. Open the app and start writing in seconds.</p></div>
       <div class="card"><h3>Proof on Minima</h3><p>Stamp a note or a file on the Minima blockchain: proof of what it said and when, that anyone can check, for good.</p></div>
     </div>
-    <p class="note own-relay">Notes travel through public relays when your devices cannot reach each other. <a href="https://github.com/mininotesorg/relay">Run your own relay</a> and they go through a server you control.</p>
+    <p class="note own-relay">Notes travel through public relays when your devices cannot reach each other. <a href="https://github.com/mininotesorg/server">Run your own server</a> and they go through a machine you control, which can keep your sealed backups too.</p>
   </div>
 </section>
 
@@ -149,7 +150,7 @@
         }
         return null;
       }
-      var android=newest(/^Mininotes-[0-9.]+\.apk$/),windows=newest(/^Mininotes-Windows-[0-9.]+\.zip$/);
+      var android=newest(/^Mininotes-[0-9.]+\.apk$/),windows=newest(/^Mininotes-Windows-[0-9.]+\.msi$/);
       if(android)document.getElementById("get-android").href=android.url;
       if(windows)document.getElementById("get-windows").href=windows.url;
       if(!android&&!windows)return;

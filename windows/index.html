@@ -3,41 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Download Mininotes for Windows</title>
-<meta name="theme-color" content="#285646">
-<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
-<link rel="stylesheet" href="../assets/site.css">
+<title>Mininotes for Windows</title>
+<meta http-equiv="refresh" content="0; url=../#download">
+<link rel="canonical" href="https://mininotes.org/#download">
 </head>
 <body>
-<div class="hero" style="min-height:100vh">
-  <div class="wrap" style="display:block;max-width:640px">
-    <a class="brand" href="../"><img src="../assets/mininotes-512.png" alt="">Mininotes</a>
-    <h1 style="margin-top:36px">Downloading Mininotes for Windows…</h1>
-    <p class="lead" id="said">Finding the newest version.</p>
-    <p class="small">If nothing starts, <a class="onground" id="fallback" href="https://github.com/mininotesorg/mininotes/releases/latest">open the latest release</a> and choose the Mininotes-Windows .zip file.</p>
-  </div>
-</div>
-<script>
-  // The newest release's Windows file, by its own versioned name (Mininotes-Windows-0.1.001.zip), fetched from GitHub
-  // and started at once. The only request this page makes is that one, to GitHub.
-  // The newest release that has the file: while a new release is still being built its file is not up yet (the Windows
-  // one takes ten minutes longer), and then the one before it is the newest there is.
-  fetch("https://api.github.com/repos/mininotesorg/mininotes/releases?per_page=10")
-    .then(function(r){return r.json();})
-    .then(function(releases){
-      for(var i=0;i<releases.length;i++){
-        var release=releases[i];
-        if(release.draft||release.prerelease)continue;
-        var file=(release.assets||[]).filter(function(a){return /^Mininotes-Windows-[0-9.]+\.zip$/.test(a.name);})[0];
-        if(!file)continue;
-        document.getElementById("said").textContent="Mininotes "+release.tag_name.replace(/^v/,"")+" · "+file.name;
-        document.getElementById("fallback").href=file.browser_download_url;
-        location.replace(file.browser_download_url);
-        return;
-      }
-      document.getElementById("said").textContent="Could not find the file. Use the link below.";
-    })
-    .catch(function(){document.getElementById("said").textContent="Could not reach GitHub. Use the link below.";});
-</script>
+<!-- Older phones link here ("Mininotes on your PC…"): the download is on the home page now, the installer first. -->
+<p><a href="../#download">Download Mininotes for Windows</a></p>
+<script>location.replace("../#download");</script>
 </body>
 </html>
