@@ -32,6 +32,12 @@ img { max-width: 100%; }
 
 /* The bar */
 .bar { background: var(--ground); color: var(--on-ground); }
+/* Kept at the top of the window: out of the way while reading down, back at the first move up (assets/header.js). */
+header.bar { position: sticky; top: 0; z-index: 20; transition: transform .25s ease; box-shadow: 0 1px 0 rgba(0,0,0,.08); }
+header.bar.away { transform: translateY(-100%); }
+@media (prefers-reduced-motion: reduce) { header.bar { transition: none; } }
+/* A place jumped to is never under the bar. */
+[id] { scroll-margin-top: 76px; }
 .bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; flex-wrap: wrap; }
 .brand { display: flex; align-items: center; gap: 10px; color: var(--on-ground); text-decoration: none; font-weight: 700; font-size: 19px; }
 .brand img { width: 32px; height: 32px; border-radius: 7px; }
