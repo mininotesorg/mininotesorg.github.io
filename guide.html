@@ -1,0 +1,849 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mininotes guide</title>
+<meta name="description" content="Everything Mininotes can do, on the phone and on the PC, drawn and explained in plain words, and what happens under the hood.">
+<meta name="theme-color" content="#285646">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/mininotes-512.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/guide.css">
+<meta property="og:title" content="Mininotes guide">
+<meta property="og:description" content="Everything Mininotes can do, on the phone and on the PC, drawn and explained in plain words.">
+<meta property="og:image" content="assets/mininotes-512.png">
+</head>
+<body id="top">
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/mininotes-512.png" alt="">Mininotes</a>
+    <nav aria-label="Site">
+      <a href="guide.html" aria-current="page">Guide</a>
+      <a href="./#download">Download</a>
+      <a href="./#roadmap">Roadmap</a>
+      <a href="./#talk">Talk to us</a>
+    </nav>
+  </div>
+</header>
+
+<main class="guide">
+
+<div class="guide-hero">
+  <div class="wrap">
+    <h1>Mininotes guide</h1>
+    <p class="lead">Everything Mininotes can do, on the phone and on the PC, in plain words and drawings. At the end: what happens under the hood, and every hidden gesture in one table.</p>
+    <p class="note">Written for Mininotes 0.4.057. The words in <b>bold</b> are the app's own labels, as you see them on the screen in English.</p>
+    <div class="legend">
+      <p><span class="dev">Phone</span><span class="dev">PC</span> how to reach it on each</p>
+      <p><span class="hid">Hidden</span> nothing on the screen shows it: now you know</p>
+    </div>
+
+    <nav class="toc" id="contents" aria-labelledby="contents-title">
+      <h2 id="contents-title">Contents</h2>
+      <ol>
+        <li><a href="#start">Start</a></li>
+        <li><a href="#write">Write</a></li>
+        <li><a href="#organise">Organise</a></li>
+        <li><a href="#recent">Recent</a></li>
+        <li><a href="#devices">Your own devices</a></li>
+        <li><a href="#share">Share with people</a></li>
+        <li><a href="#people">People and devices, My profile</a></li>
+        <li><a href="#marks">Where everything stands</a></li>
+        <li><a href="#files">Files, photos, recordings</a></li>
+        <li><a href="#pc-files">Files on the PC</a></li>
+        <li><a href="#versions">Versions</a></li>
+        <li><a href="#backups">Backups</a></li>
+        <li><a href="#agent">The Agent</a></li>
+        <li><a href="#stamp">Stamp on Minima</a></li>
+        <li><a href="#privacy">Privacy and the lock</a></li>
+        <li><a href="#private-spaces">Private spaces, help request</a></li>
+        <li><a href="#languages">Languages and translation</a></li>
+        <li><a href="#settings">Settings</a></li>
+        <li><a href="#updates">Updates</a></li>
+        <li><a href="#feedback">Feedback</a></li>
+        <li><a href="#under-the-hood">Under the hood</a></li>
+        <li><a href="#hidden-gestures">Hidden gestures at a glance</a></li>
+      </ol>
+    </nav>
+  </div>
+</div>
+
+<!-- ============================================================ START -->
+<section id="start">
+  <div class="wrap">
+    <h2>Start</h2>
+    <p class="sub">Install it, open it, choose your language. There is no account to make and nothing else to install.</p>
+
+    <h3 id="install">Install</h3>
+    <div class="how">
+      <p class="on"><span class="dev">Phone</span> Android 9 or newer. Press <b>Download for Android</b> on <a href="./#download">the home page</a> (or scan its code), then open the file. Android asks whether to allow installing from your browser; you can switch that off again afterwards.</p>
+      <p class="on"><span class="dev">PC</span> Windows 10 or 11. Press <b>Download for Windows</b> and open the installer. It needs no administrator rights, can put a shortcut on the desktop if you tick it, and ends with <b>Launch Mininotes</b>. A zip you extract anywhere is also on <a href="https://github.com/mininotesorg/mininotes/releases/latest">the releases page</a>.</p>
+    </div>
+    <p>Every Android release is signed with the same Mininotes key. The README on GitHub gives its fingerprint, if you want to check it.</p>
+
+    <h3 id="first-start">First start</h3>
+    <ul>
+      <li>Mininotes asks for your <b>language</b> first, with your device's own already picked. It asks again at each start until you confirm one.</li>
+      <li>Then you are on <b>Home</b>: a <b>README</b> note in your language and a <b>Photos</b> folder are already there. Write straight away.</li>
+      <li>Nothing else is needed: the small network node that carries your notes is inside the app.</li>
+      <li>When you have a moment, think about the lock (<a href="#privacy">Privacy and the lock</a>) and a backup (<a href="#backups">Backups</a>).</li>
+    </ul>
+
+    <h3 id="language">Language</h3>
+    <div class="how">
+      <p class="on"><span class="dev">Phone</span> The menu ⋮, then <b>Mininotes</b>, then <b>Language</b>; or the top of <b>Settings</b>.</p>
+      <p class="on"><span class="dev">PC</span> <b>≡ Menu</b>, then <b>Mininotes</b>, then <b>Language</b>; or the top of <b>Settings…</b>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ WRITE -->
+<section id="write">
+  <div class="wrap">
+    <h2>Write</h2>
+    <p class="sub">A note is a ruled page. It is saved as you type: there is no save button.</p>
+
+    <h3 id="the-page">The page</h3>
+    <ul>
+      <li><b>Saved as you type.</b> On the PC, <kbd>Ctrl</kbd>+<kbd>S</kbd> saves at once if you like.</li>
+      <li><b>Write anywhere below the last line.</b> <span class="hid">Hidden</span> About a screen of empty ruled paper waits below the last line. Tap or click any empty line and the cursor goes there. Nothing is written until you type.</li>
+      <li><b>The keyboard</b> (phone) comes only when you tap or double tap. Holding a word selects it without bringing up the keyboard. <span class="hid">Hidden</span></li>
+      <li><b>Zoom the whole screen</b> (phone) with two fingers, from 1× to 4×, and move around with two fingers. <span class="hid">Hidden</span></li>
+      <li><b>Text size of a note:</b> the <b>A−</b> and <b>A+</b> ladder at the top of the note's menu.</li>
+      <li><b>Writing lines</b> on or off: a switch in the note's menu, for this device only.</li>
+      <li><b>Limits:</b> 24,000 characters per tab and 100,000 per note. A warning line shows from nine tenths. What cannot fit, or what was deleted elsewhere while you wrote, becomes a note such as "Plan (continued)" or "Plan (copy)", so nothing is lost.</li>
+      <li><b>Pasted text</b> keeps its paragraphs.</li>
+    </ul>
+    <figure class="ill" id="fig-below-last-line">
+      <img src="assets/guide/17-below-the-last-line.svg" width="600" height="480" loading="lazy"
+        alt="A Groceries note with three lines written; a finger taps an empty line far below them and the cursor appears there.">
+      <figcaption>Tap any empty line below the last one: the cursor goes there.</figcaption>
+    </figure>
+
+    <h3 id="title-and-tabs">The title and the tabs</h3>
+    <div class="how">
+      <p class="on"><span class="dev">Phone</span> Tap the title to rename the note. Hold the title for the note's menu. <span class="hid">Hidden</span> Hold a tab to rename or remove it; hold it, then carry it, to move it. <span class="hid">Hidden</span></p>
+      <p class="on"><span class="dev">PC</span> Type in the title field, or press <kbd>F2</kbd> on a note's icon. Right-click a tab to rename or remove it; drag it to move it. <span class="hid">Hidden</span></p>
+    </div>
+    <p>A note can hold several pages, like index cards: <b>+ Add a tab</b> on the band under the title. <b>Move left</b> and <b>Move right</b> are in a tab's menu too. Each tab remembers where your cursor was and how far you had scrolled.</p>
+    <figure class="ill" id="fig-note-head">
+      <img src="assets/guide/06-note-head.svg" width="600" height="500" loading="lazy"
+        alt="The head of a note called Trip to Lyon, with eight numbered spots: back to Home, the title, the Agent and menu, the mark, the rounds, the line under the title, the stamp line, and the tabs.">
+      <figcaption>The head of a note. Each part is explained further down: the mark in <a href="#marks">Where everything stands</a>, the rounds in <a href="#share">Share with people</a>, the stamp line in <a href="#stamp">Stamp on Minima</a>.</figcaption>
+    </figure>
+
+    <h3 id="bold-links">Bold, italic, underline and links</h3>
+    <ul>
+      <li>Type the marks around the words: two stars on each side for <b>bold</b>, one star for <i>italic</i>, two underscores for <u>underline</u>. Or press <kbd>Ctrl</kbd>+<kbd>B</kbd>, <kbd>Ctrl</kbd>+<kbd>I</kbd> or <kbd>Ctrl</kbd>+<kbd>U</kbd>. The marks themselves are hidden on the page. <span class="hid">Hidden</span></li>
+      <li>On a phone without a keyboard, select words: <b>Bold</b>, <b>Italic</b> and <b>Underline</b> are beside <b>Copy</b>.</li>
+      <li>A tap or a click on a link opens it.</li>
+    </ul>
+    <div class="how">
+      <p class="on"><span class="dev">Phone</span> Hold a link: <b>Copy link</b>, <b>Open link</b> and <b>Share link</b> come up under your finger. <span class="hid">Hidden</span></p>
+      <p class="on"><span class="dev">PC</span> Right-click a link: <b>Open link</b> and <b>Copy link</b>. <span class="hid">Hidden</span></p>
+    </div>
+
+    <h3 id="find-in-note">Find in this note</h3>
+    <div class="how">
+      <p class="on"><span class="dev">Phone</span> The menu ⋮, then <b>Find in this note</b>. Move with ▲ and ▼, close with ×.</p>
+      <p class="on"><span class="dev">PC</span> <kbd>Ctrl</kbd>+<kbd>F</kbd> over a note, the note's ⋯, or a right-click on the page. <kbd>Enter</kbd> or <kbd>F3</kbd> next, <kbd>Shift</kbd>+<kbd>F3</kbd> previous, <kbd>Esc</kbd> closes.</p>
+    </div>
+    <p>It says "1 of 5", for example, and after the last match it moves on to the next tab. A note opened from a search opens at the first match, with the same bar.</p>
+
+    <h3 id="undo">Undo, copy, translate</h3>
+    <ul>
+      <li><b>Undo</b> in the page: <kbd>Ctrl</kbd>+<kbd>Z</kbd> and <kbd>Ctrl</kbd>+<kbd>Y</kbd> on the PC. An <b>Undo …</b> row at the top of the menus undoes a move, a rename or a trip to the bin, on both.</li>
+      <li><b>Copy the text</b> (PC) is in the note's menu.</li>
+      <li><b>Translate…</b>: see <a href="#languages">Languages and translation</a>.</li>
+      <li><b>Who wrote what</b> can be shown in each person's colour: <b>Settings</b>, <b>Writing colours</b>, <b>Show who wrote what</b>.</li>
+    </ul>
+
+    <h3 id="from-other-apps">From other apps, pictures and voice</h3>
+    <div class="how">
+      <p class="on"><span class="dev">Phone</span> In any app's share sheet choose <b>Add to Mininotes</b>: <b>New note with it</b>, <b>Temp</b>, <b>Into a folder or a note</b>, or <b>Send to someone</b>. Paste a picture with the keyboard's picture button or <b>Paste</b> (Android 12 or newer). Voice typing works while <b>Keyboard learns from my notes</b> is on in Settings (it is on by default); off means incognito, with no voice typing.</p>
+      <p class="on"><span class="dev">PC</span> <kbd>Ctrl</kbd>+<kbd>V</kbd> pastes a picture into a note. Drag files from Explorer onto a note to attach them.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ ORGANISE -->
+<section id="organise">
+  <div class="wrap">
+    <h2>Organise</h2>
+    <p class="sub">Home holds your notes and folders as icons, each where you put it, on as many pages as you like.</p>
+
+    <h3 id="make">Make something: the round +</h3>
+    <p>The round <b>+</b> at the bottom right of Home, of every folder and of every place offers <b>Note</b>, <b>Folder</b>, <b>Take a photo</b> (phone), <b>From this device…</b> and <b>From another device…</b>.</p>
+
+    <h3 id="menus">Every icon's menu</h3>
+    <div class="how">
+      <p class="on"><span class="dev">Phone</span> Hold the icon. <span class="hid">Hidden</span></p>
+      <p class="on"><span class="dev">PC</span> Right-click it, or select it and press the Menu key or <kbd>Shift</kbd>+<kbd>F10</kbd>.</p>
+    </div>
+    <p>The menu has everything: <b>Colour</b> with its strength, <b>Icon…</b>, <b>Sync and sharing</b>, <b>Move to…</b>, <b>Add to the dock</b>, <b>Add to favourites</b>, <b>Temporary…</b>, <b>Archive</b> and <b>Move to bin…</b>.</p>
+    <p>Hold (phone) or right-click (PC) an <b>empty space on Home</b> for Home's own menu: Create and Find rows, <b>Home's colour</b>, Undo, <b>Sync now</b>, the <b>Show on Home</b> switches and <b>All pages</b>. <span class="hid">Hidden</span></p>
+    <figure class="ill" id="fig-hold-right-click">
+      <img src="assets/guide/02-hold-or-right-click.svg" width="600" height="590" loading="lazy"
+        alt="On a phone a finger holds the Groceries icon and its menu opens; on the PC a right-click on the same icon opens the same menu.">
+      <figcaption>Hold on the phone, right-click on the PC: the same menu.</figcaption>
+    </figure>
+
+    <h3 id="carry">Move things: carry them</h3>
+    <div class="how">
+      <p class="on"><span class="dev">Phone</span> Hold an icon, then move your finger without letting go. <span class="hid">Hidden</span></p>
+      <p class="on"><span class="dev">PC</span> Drag it with the mouse.</p>
+    </div>
+    <ul>
+      <li>Let go in an <b>empty place</b>: it stays there. Gaps are kept, and the other icons keep their places.</li>
+      <li>Let go on a <b>folder</b>: it goes inside. Pause over a folder and it opens, so you can go deeper.</li>
+      <li>Let go on <b>another note</b>: a new folder is made, holding both.</li>
+      <li>While you carry, a <b>strip across the top</b> offers ★ Favourite, Temp, Archive, Bin and Share (Send, for a file). Let go on one: done, with no menu.</li>
+      <li>Carry an icon onto the <b>dock</b> to dock it.</li>
+    </ul>
+    <figure class="ill" id="fig-drop-strip">
+      <img src="assets/guide/03-carry-and-drop-strip.svg" width="600" height="500" loading="lazy"
+        alt="A finger carries the Groceries icon up to a strip across the top of the screen offering Favourite, Temp, Archive, Bin and Share; Temp is lit under it.">
+      <figcaption>Carrying an icon: the strip at the top takes it straight to Temp, the archive, the bin, your favourites or Share.</figcaption>
+    </figure>
+
+    <h3 id="folders">Folders</h3>
+    <p>Folders hold notes and other folders, as deep as you like. An open folder shows as a card over Home.</p>
+    <ul>
+      <li>Carry an icon <b>out of an open folder</b>: the card steps aside so you can drop it on Home. <span class="hid">Hidden</span></li>
+      <li>Pause over the card's <b>‹ name</b> while carrying: you go up one level. <span class="hid">Hidden</span></li>
+      <li>New things follow the look of the folder they are made in.</li>
+    </ul>
+    <figure class="ill" id="fig-folders">
+      <img src="assets/guide/05-folders.svg" width="600" height="600" loading="lazy"
+        alt="On the left a note carried onto another note makes a new folder holding both. On the right an icon is carried out of an open folder card, which steps aside.">
+      <figcaption>A note onto a note makes a folder. Carried out of an open folder, an icon goes back to Home.</figcaption>
+    </figure>
+
+    <h3 id="pages">Pages</h3>
+    <p>Home has pages in every direction: above, below and to the sides. <span class="hid">Hidden</span></p>
+    <div class="how">
+      <p class="on"><span class="dev">Phone</span> Swipe to move between pages. Double tap empty Home to go back to the <b>main page</b>. Pinch Home to see <b>all pages at once</b>, then tap one to go there. <span class="hid">Hidden</span></p>
+      <p class="on"><span class="dev">PC</span> The wheel; <kbd>Shift</kbd>+wheel or the touchpad sideways; drag the empty space; <kbd>Page Up</kbd>/<kbd>Page Down</kbd>, and <kbd>Ctrl</kbd>+<kbd>Page Up</kbd>/<kbd>Page Down</kbd> sideways. Double-click empty Home or press <kbd>Ctrl</kbd>+<kbd>Home</kbd> for the main page. <kbd>Ctrl</kbd>+wheel shows all pages. <span class="hid">Hidden</span></p>
+    </div>
+    <ul>
+      <li><b>A new page:</b> carry an icon to an edge of the screen and hold it there. Carrying above or below the rows turns the page. <span class="hid">Hidden</span></li>
+      <li><b>Move a whole page:</b> with all pages showing, hold a page still (phone) or drag it (PC). Onto another page, the two swap; onto the main page's place, it becomes the main page. <span class="hid">Hidden</span></li>
+      <li><b>All pages</b> and <b>Back to the main page</b> are also in Home's menu.</li>
+    </ul>
+    <figure class="ill" id="fig-pages">
+      <img src="assets/guide/04-pages-and-pinch.svg" width="600" height="610" loading="lazy"
+        alt="Two fingers pinch Home; then every page shows at once, nine small pages with the main page outlined, and one page is carried onto another to swap them.">
+      <figcaption>Pinch for every page at once; carry a page to swap it; double tap to go home to the main page.</figcaption>
+    </figure>
+
+    <h3 id="pc-keyboard">On the PC: several at once, and the keyboard</h3>
+    <ul>
+      <li><b>Choose several:</b> <kbd>Ctrl</kbd>+click or <kbd>Shift</kbd>+click. The menu then acts on all of them (Save, Copy, Send, Move to bin); <kbd>Esc</kbd> lets go. <span class="hid">Hidden</span></li>
+      <li><b>The keyboard on Home:</b> <kbd>Tab</kbd> and the arrows move, <kbd>Home</kbd>/<kbd>End</kbd> go to the ends, <kbd>Enter</kbd> or <kbd>Space</kbd> opens, <kbd>F2</kbd> renames, <kbd>Delete</kbd> puts in the bin, <kbd>Ctrl</kbd>+arrows nudge an icon, <kbd>Ctrl</kbd>+<kbd>N</kbd> makes a new note, <kbd>Ctrl</kbd>+<kbd>W</kbd> closes, <kbd>Esc</kbd> goes back a step. <span class="hid">Hidden</span></li>
+      <li><b>Paste on Home:</b> <kbd>Ctrl</kbd>+<kbd>V</kbd> on Home, in a folder or in Temp keeps the picture or the files from the clipboard there. <span class="hid">Hidden</span></li>
+      <li><b>Drag files in</b> from Explorer: onto a note (attached), a folder or Temp's card (kept there), Home, or elsewhere (the Send box opens). A box says what was not taken, and why.</li>
+      <li><b>Drag out</b> to Explorer or the desktop: it is copied. Hold <kbd>Shift</kbd> and it moves (Mininotes' copy goes to the bin). <span class="hid">Hidden</span></li>
+      <li><b>The logo</b> takes you Home; on Home, it opens My profile. <span class="hid">Hidden</span></li>
+    </ul>
+
+    <h3 id="colours">Colours, icons and pictures</h3>
+    <ul>
+      <li><b>Colour</b> in a thing's menu, with a slider for its strength. <b>Icon…</b> chooses its face.</li>
+      <li>On the phone, tap the face before a note's title to open the icon picker.</li>
+      <li><b>Icon…</b>, then <b>Choose a picture…</b> puts a picture on it. Reframe it with one finger (move), two fingers (zoom) and quarter turns.</li>
+      <li>On shared things, <b>For: Everybody</b> or <b>Only me</b> says who sees the colour.</li>
+      <li><b>Home's colour</b>, in Home's menu, colours the whole app.</li>
+    </ul>
+
+    <h3 id="dock">The dock and favourites</h3>
+    <ul>
+      <li>The <b>dock</b> is the row at the foot of Home: <b>Add to the dock</b> and <b>Remove from the dock</b> in a thing's menu. Each device has its own dock. It scrolls sideways when full: swipe on the phone, the wheel or the bar on the PC. <span class="hid">Hidden</span></li>
+      <li><b>Add to favourites</b> also docks it. A <b>Favourites</b> icon on Home holds them all; reorder them by carrying them inside its card.</li>
+    </ul>
+
+    <h3 id="search">Search, Tree and Show on Home</h3>
+    <div class="how">
+      <p class="on"><span class="dev">Phone</span> The search bar above the dock opens a box that also offers your Favourites and Recent. <b>Tree</b> (menu, Find) shows everything at once, in a box.</p>
+      <p class="on"><span class="dev">PC</span> <kbd>Ctrl</kbd>+<kbd>F</kbd> on Home, <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd> anywhere. <b>Tree</b> opens as a side panel (<kbd>Ctrl</kbd>+<kbd>B</kbd> outside a page), with a divider you can drag or fold.</p>
+    </div>
+    <p>Search finds notes, folders and files by their words; in Chinese, Japanese or Korean one character is enough. <b>Show on Home</b> (in Settings, or Home's menu) chooses which places Home shows: Dock, Search, Recent, Temp, Shared with me, Archive, Bin and README. A place that is off is still in the menu under <b>Places</b>, and <b>Hide from Home</b> is in each place's menu.</p>
+
+    <h3 id="photos">The Photos album</h3>
+    <p>A <b>Photos</b> folder is on Home from the start, and any folder can be shown this way: <b>Show as an album</b> in its menu. Tap a square to see the photo large. The album's <b>+</b> offers <b>Add photos…</b> and <b>Take a photo…</b>.</p>
+    <div class="how">
+      <p class="on"><span class="dev">Phone</span> Swipe for the next or previous photo. <span class="hid">Hidden</span></p>
+      <p class="on"><span class="dev">PC</span> <kbd>←</kbd> <kbd>→</kbd>, <kbd>Home</kbd>, <kbd>End</kbd>, and <kbd>Esc</kbd> to close.</p>
+    </div>
+
+    <h3 id="temp">Temp</h3>
+    <p>Temp is for things you need only for a while, and for passing things between your own devices and the people you choose. What is in Temp goes to them, and is gone everywhere, at the same moment, when its time is up.</p>
+    <ul>
+      <li><b>Temp's menu:</b> <b>Things stay</b> (from 15 minutes to 24 hours), <b>Send what is in Temp</b>, then <b>Who it goes to…</b>, <b>Sync Temp now</b>, and <b>Also show on Home</b>.</li>
+      <li><b>Drop a thing on Temp</b> and it becomes temporary, with no question.</li>
+      <li><b>Temporary…</b> in any thing's menu chooses how long, or <b>Until I delete it</b>.</li>
+      <li><b>A notepad that stays:</b> switch on <b>Temp: a notepad that stays</b> in Settings, or choose <b>Stays in Temp</b> in a note's menu. The note stays in Temp; its words are emptied after Temp's time, and a version is kept first.</li>
+      <li>Opening Temp clears its "new" marks. A tap on Temp's mark syncs it now.</li>
+    </ul>
+    <figure class="ill" id="fig-temp">
+      <img src="assets/guide/11-temp.svg" width="600" height="600" loading="lazy"
+        alt="Temp open as a card holding a Notepad, a ticket and a photo, with its menu; beside it the Temporary box of a note with 15 minutes, 1 hour, 24 hours and Until I delete it.">
+      <figcaption>Temp and its menu; and how long a thing stays, chosen from its own menu.</figcaption>
+    </figure>
+
+    <h3 id="archive-bin">Archive and bin</h3>
+    <ul>
+      <li><b>Archive</b> puts a thing out of sight; <b>Move to bin…</b> deletes it. Or drop it on their icons.</li>
+      <li>Inside both: <b>Put back</b> puts it back where it was. In the bin: <b>Delete for good</b> and <b>Empty the bin…</b>.</li>
+      <li>A file taken out of a note with its × goes to the bin at once, and leaves the note on every device. <b>Put back</b> brings it back everywhere.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================ RECENT -->
+<section id="recent">
+  <div class="wrap">
+    <h2>Recent</h2>
+    <p class="sub">What you opened lately, newest first. Taking something off Recent deletes nothing.</p>
+    <div class="how">
+      <p class="on"><span class="dev">Phone</span> <b>Recent</b> is a place on Home (or menu, <b>Places</b>, <b>Recent</b>). Hold a line for <b>Remove from Recent</b>. <b>Settings</b>, <b>Recent keeps</b> says for how long.</p>
+      <p class="on"><span class="dev">PC</span> A column down the side, with <b>≡ Menu</b> at its top. Right-click a line for its menu and <b>Remove from Recent</b>. Drag the divider to resize or fold the column.</p>
+    </div>
+
+    <h3 id="recent-cards">Recent as cards</h3>
+    <div class="how">
+      <p class="on"><span class="dev">Phone</span> On Home's main page, <b>swipe up from the dock</b>, or tap the small handle just above it. <span class="hid">Hidden</span></p>
+      <p class="on"><span class="dev">PC</span> The button beside the search, or <kbd>Ctrl</kbd>+<kbd>Tab</kbd>: keep <kbd>Ctrl</kbd> held, <kbd>Tab</kbd> moves on, <kbd>Shift</kbd>+<kbd>Tab</kbd> back, let go of <kbd>Ctrl</kbd> to open. <span class="hid">Hidden</span></p>
+    </div>
+    <ul>
+      <li>Up to 20 cards, newest first. A note's card shows its colour, face, title and first lines; a folder's, its face and name. Scroll sideways and tap one to go there.</li>
+      <li><b>Close a card: throw it up.</b> It leaves Recent until you open that thing again. Or hold a card for <b>Open</b> and <b>Close</b>. <span class="hid">Hidden</span></li>
+      <li><b>Put the cards away:</b> tap outside them, or press Back.</li>
+      <li>On the PC: <kbd>←</kbd> <kbd>→</kbd>, <kbd>Enter</kbd> or <kbd>Space</kbd> opens, × or a middle click closes a card, a right-click gives <b>Close</b> and the menu, <kbd>Esc</kbd> puts them away.</li>
+      <li>Temp is never a card.</li>
+    </ul>
+    <figure class="ill" id="fig-recent-cards">
+      <img src="assets/guide/01-recent-cards.svg" width="600" height="600" loading="lazy"
+        alt="A finger swipes up from the dock of a phone, where the small handle is circled; the cards of Recent appear in a row, and the Groceries card is thrown up to close it.">
+      <figcaption>Swipe up from the dock for the cards of Recent. Throw a card up to close it; tap outside or press Back to put them away.</figcaption>
+    </figure>
+    <figure class="ill" id="fig-recent-pc">
+      <img src="assets/guide/16-recent-on-the-pc.svg" width="600" height="500" loading="lazy"
+        alt="A PC window with the Recent column on the left under Menu; a right-click on a line offers Remove from Recent; the column's divider can be dragged; a button beside the search shows the cards.">
+      <figcaption>Recent on the PC: the column, its divider, and the button for the cards.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============================================================ DEVICES -->
+<section id="devices">
+  <div class="wrap">
+    <h2>Your own devices</h2>
+    <p class="sub">Link your phone and your PC once. From then on, what you share with your devices keeps itself up to date on all of them, both ways, a few seconds after you stop writing.</p>
+
+    <h3 id="link-device">Link a device</h3>
+    <ol class="steps">
+      <li>Open <b>People and devices</b> (menu, <b>Sync and sharing</b>, <b>People and devices…</b>) and tap the one round <b>+</b>. The camera opens.</li>
+      <li>Scan the code of the other device. No camera? <b>Paste a link</b>, <b>Open a picture</b>, or <b>Show my code</b> so the other one scans you.</li>
+      <li><b>What is it?</b> Choose <b>One of my devices</b>.</li>
+      <li><b>Also link it with</b>: your other devices, already ticked, so they all know each other.</li>
+      <li><b>What it gets</b>: <b>Nothing yet</b>, <b>Admin</b>, <b>Can write</b> or <b>Can read</b> of everything. <b>Nothing yet</b> means only Temp and what you share with it.</li>
+    </ol>
+    <figure class="ill" id="fig-link-device">
+      <img src="assets/guide/09-link-a-device.svg" width="600" height="600" loading="lazy"
+        alt="Six small screens in order: tap the round plus, scan the code, What is it, Also link it with, What it gets, and the new phone listed under My devices.">
+      <figcaption>Linking one of your devices, from the round + to the new device in your list.</figcaption>
+    </figure>
+    <ul>
+      <li><b>Later:</b> tap a device's line and it drops down to <b>Admin</b>, <b>Can write</b>, <b>Can read</b> or <b>Remove</b> (asked first).</li>
+      <li><b>Not linked here yet:</b> a device another of yours already knows shows under My devices with <b>Link</b>, with no code to scan. A person's line may ask <b>One of your devices?</b>, with <b>This is my device</b>.</li>
+      <li><b>Each device keeps its own layout and its own dock.</b> Moving a note on one does not move it on the other.</li>
+      <li><b>The same on all my devices:</b> the Integritas key (My profile, <b>Stamping</b>, <b>Also on my devices</b>) and your relays (Settings, <b>Relays</b>, <b>The same on all my devices</b>).</li>
+      <li><b>Mininotes on your PC…</b> and <b>Mininotes on your phone…</b>, in the Mininotes part of the menu, give the other app with a code or a link.</li>
+      <li><b>Forget</b>, on a device's page, forgets it. It unshares nothing.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================ SHARE -->
+<section id="share">
+  <div class="wrap">
+    <h2>Share with people</h2>
+    <p class="sub">Add someone once, then share a note, a folder or a file with them. Everything is an invitation they accept or ignore.</p>
+
+    <h3 id="add-someone">Add someone</h3>
+    <ol class="steps">
+      <li>In <b>People and devices</b>, tap the round <b>+</b> and scan their code, or paste the link they sent you.</li>
+      <li><b>What is it?</b> <b>Someone else</b>. Then a group: <b>No group</b>, a group, or <b>New group…</b>.</li>
+      <li><b>What it gets</b>, then <b>Add</b>.</li>
+    </ol>
+    <p>They see "Ana wants to add you" with <b>Accept</b>, <b>Ignore</b> and <b>Later</b>. A pasted link shows six digits on both sides to compare; a scanned code needs none. To send yours: <b>Copy my link</b> or <b>Share my link</b>.</p>
+
+    <h3 id="share-thing">Share a thing</h3>
+    <p>In its menu: <b>Sync and sharing</b>, then <b>Share…</b>. Choose the role first, then people or groups, or <b>Show my code…</b>, then <b>Done</b>.</p>
+    <ul>
+      <li><b>Roles:</b> <b>Owner</b> (whoever made it; it cannot be given), <b>Admin</b>, <b>Can write</b> and <b>Can read</b>.</li>
+      <li><b>Each row</b> of the Share box has a drop-down with the levels and <b>Remove</b>, even for someone who has it through a folder or a group. <b>Removed here</b> stops it for that thing and everything inside it.</li>
+      <li><b>Where it is</b>, at the top of the Share box, with <b>Show it</b>.</li>
+      <li><b>Sharing a folder shares everything in it</b>, including what you put in later.</li>
+      <li><b>Groups</b>, like Friends or Colleagues: everyone in a group gets the same role, including people added later. Make one with <b>New group…</b>; rename or delete it behind its <b>›</b> in People and devices.</li>
+    </ul>
+    <figure class="ill" id="fig-share-box">
+      <img src="assets/guide/10-share-box.svg" width="600" height="600" loading="lazy"
+        alt="The Share box of Trip to Lyon: Where it is with Show it, the role chosen first, people each with a drop-down of levels and Remove, one marked Removed here, and a group.">
+      <figcaption>The Share box: the role first, then who; each row can be changed or removed.</figcaption>
+    </figure>
+
+    <h3 id="accept">When someone shares with you</h3>
+    <ul>
+      <li>A notification says <b>Shared with you</b> (phone), or the bar and the tray icon say it (PC). It waits in <b>Shared with me</b>.</li>
+      <li>Tap it for <b>Accept</b>, <b>Refuse</b> (quietly, or with a word back), <b>See sender</b> or <b>Block sender</b>. Blocked senders are listed in People and devices.</li>
+      <li><b>Accept everything without asking</b>: a switch on a person's page, also offered once after you accept one of theirs by hand. <span class="hid">Hidden</span></li>
+      <li>A new file you have not opened yet: a tap shows its card with <b>Keep it here</b>, <b>Move to…</b>, <b>Move to bin</b> and <b>Open</b>.</li>
+    </ul>
+
+    <h3 id="rounds">The rounds</h3>
+    <p>The rounds beside a note's title are the people and devices who have it, with their picture or initial: three on the phone and four on the PC, then <b>+N</b>, which lists everyone.</p>
+    <div class="how">
+      <p class="on"><span class="dev">Phone</span> Tap a round: the picture big, and <b>Ana's page…</b>, <b>Chat on Parlons!</b>, <b>Writing colour…</b>, <b>Sharing…</b>.</p>
+      <p class="on"><span class="dev">PC</span> The same on a click. Rest the pointer on a round: who it is, what they may do, where they stand with the writing, and how many files are still going to them. <span class="hid">Hidden</span></p>
+    </div>
+    <figure class="ill" id="fig-rounds">
+      <img src="assets/guide/07-rounds.svg" width="600" height="600" loading="lazy"
+        alt="A finger taps Ana's round and her picture shows big with her menu; on the PC the pointer rests on Ben's round and a box says what he may do and where he stands; the lines of the note are in the colours of who wrote them.">
+      <figcaption>Tap a round for the person's menu; on the PC, rest the pointer on it. With writing colours on, each round is ringed in that person's colour.</figcaption>
+    </figure>
+
+    <h3 id="parlons">Parlons! and sending files</h3>
+    <ul>
+      <li>Your <b>Parlons!</b> address, in My profile, is sent to your contacts by itself. <b>Chat on Parlons!</b> is on each round. On the phone, <b>Send with Parlons!</b> is on a file and on a note (sent as a .md file).</li>
+      <li><b>Send files</b> in no note: menu, <b>Send</b>, <b>Send files…</b> or <b>Sent files…</b>; or <b>Send to a device…</b> in a file's menu.</li>
+      <li>Your own picture for a contact: their page, <b>Picture…</b>. Only you see it.</li>
+      <li><b>Remove this person…</b> is at the foot of their page.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================ PEOPLE -->
+<section id="people">
+  <div class="wrap">
+    <h2>People and devices, My profile</h2>
+
+    <h3 id="people-and-devices">People and devices</h3>
+    <div class="how one">
+      <p class="on"><span class="dev">Phone and PC</span> Menu, <b>Sync and sharing</b>, <b>People and devices…</b>; or My profile, <b>Manage…</b>.</p>
+    </div>
+    <p>It lists <b>My devices</b>, <b>People</b> (each person's devices indented under them), <b>Groups</b> and <b>Blocked senders</b>. Hold a row (phone) or right-click it (PC) for <b>Their page</b>, <b>Remove</b>, <b>Add to group</b> and <b>Who has it…</b>. <span class="hid">Hidden</span></p>
+    <p>A person's page: their name and colour, <b>Accept everything without asking</b>, <b>Picture…</b>, what you share with them, <b>Send files…</b> and <b>Remove this person</b>.</p>
+
+    <h3 id="my-profile">My profile</h3>
+    <div class="how">
+      <p class="on"><span class="dev">Phone</span> Menu, <b>Sync and sharing</b>, <b>My profile…</b>; or tap the app's name in Home's bar. <span class="hid">Hidden</span></p>
+      <p class="on"><span class="dev">PC</span> Menu, <b>Sync and sharing</b>, <b>My profile…</b>; or click the logo while on Home. <span class="hid">Hidden</span></p>
+    </div>
+    <ul>
+      <li><b>Your code</b> comes first, for others to add you.</li>
+      <li><b>You:</b> your name, this device's name, your picture and your colour. Your name and picture go to the people you are paired with.</li>
+      <li>Your <b>Parlons!</b> address; <b>Stamping</b> (the Integritas key, <b>Save</b>, <b>Also on my devices</b>); <b>People and devices</b>, <b>Manage…</b>; <b>Backup</b>.</li>
+      <li>On the PC: <b>Text size</b> for the whole app, from 80% to 180%, with <b>Restart now</b>; and <b>Describe what each thing does</b>, the short line shown when the pointer rests on something.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================ MARKS -->
+<section id="marks">
+  <div class="wrap">
+    <h2>Where everything stands</h2>
+    <p class="sub">A small mark on every note, folder and icon says whether it has reached everyone.</p>
+    <figure class="ill" id="fig-marks">
+      <img src="assets/guide/08-marks.svg" width="600" height="590" loading="lazy"
+        alt="Six marks: grey ring, only here; amber arrow, waiting to go; amber dots, sent and waiting for an answer; green tick, everybody has it; grey bars, paused; red exclamation mark, a device not reached for over 3 days. Below, the Waiting to go box with its devices, what waits, and Send now.">
+      <figcaption>The six marks. Tap the amber arrow for the <b>Waiting to go</b> box.</figcaption>
+    </figure>
+    <ul>
+      <li>An empty <b>grey ring</b>: only on this device. An <b>amber arrow</b>: waiting to go. <b>Three amber dots</b>: sent, waiting for an answer. A <b>green tick</b>: everybody has this version. <b>Two grey bars</b>: paused. A <b>red !</b>: a device not reached for more than three days. <b>Settings</b>, <b>What the marks mean</b> says the same.</li>
+      <li>A mark for the whole app sits in the top bar, before the Agent.</li>
+      <li><b>Tap the amber mark</b> for the <b>Waiting to go</b> box: a <b>Devices</b> card (one row per device, with what it still lacks), <b>What waits</b>, and <b>Send now</b>.</li>
+      <li>A tap on another mark syncs now (Temp) or opens the Share box. On the phone, holding a mark opens the Share box. <span class="hid">Hidden</span></li>
+      <li><b>The line under a note's title</b> says <b>Saving…</b>, <b>Sending to Ana…</b>, or <b>Could not reach Ana</b> with <b>see why</b>. A tap on it does what a tap on the mark does.</li>
+    </ul>
+
+    <h3 id="new">New, and the trouble strip</h3>
+    <ul>
+      <li><b>"new"</b> marks show on notes, files and the folders holding them, also for changes from your own devices.</li>
+      <li><b>New</b>, at the top of Home: one line per thing; a tap opens it, its <b>×</b> clears it, and <b>Mark all as seen</b> clears them all. Hold (phone) or right-click (PC) a line for <b>Show where it is</b> and <b>Mark as seen</b>. <span class="hid">Hidden</span></li>
+      <li><b>The trouble strip</b> under the bar appears when something is wrong with a contact. <b>What to do</b> offers <b>Try now</b>, <b>Their page</b> and <b>Scan their code</b>; <b>×</b> closes it.</li>
+      <li><b>History…</b> (menu, <b>Sync and sharing</b>): lines such as "Plan reached Laptop, direct", "through your relay" or "through a public relay", and where things came from, for 30 days. It never holds the words of your notes, and never anything from a private space.</li>
+      <li><b>Sync now</b> and <b>Sync parameters…</b> are at the top of <b>This note</b> and in <b>Sync and sharing</b>.</li>
+    </ul>
+
+    <h3 id="notifications">Notifications and the tray</h3>
+    <div class="how">
+      <p class="on"><span class="dev">Phone</span> One <b>What arrived</b> notification, with a count on the app's icon. <b>Shared with you</b> and help requests have their own.</p>
+      <p class="on"><span class="dev">PC</span> The tray icon offers <b>Open</b> and <b>Exit Mininotes</b>, and says what arrived while the window was away.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ FILES -->
+<section id="files">
+  <div class="wrap">
+    <h2>Files, photos, recordings, big files</h2>
+
+    <h3 id="attach">Attach, take a photo, record</h3>
+    <div class="how">
+      <p class="on"><span class="dev">Phone</span> The paperclip (or the + note tools on a short screen): <b>Show files</b>, <b>Attach a file…</b>, <b>Take a photo…</b>, <b>Record audio</b>.</p>
+      <p class="on"><span class="dev">PC</span> The paperclip menu: <b>Attach a file</b>, <b>Take a photo</b>, <b>Record audio</b>, then the note's files with boxes to tick, <b>Select all</b>, and for those ticked <b>Save on my computer…</b>, <b>Stamp on Minima…</b> or <b>Move to bin</b>.</p>
+    </div>
+    <ul>
+      <li><b>Take a photo</b> on the PC opens Windows' own Camera. Photos it saves in the next minutes come straight into the note. <span class="hid">Hidden</span></li>
+      <li><b>Record audio:</b> up to about 45 minutes on the phone and about 17 on the PC, 16 MB at most. Leaving the note keeps recording.</li>
+      <li><b>Files by tab:</b> a file belongs to the tab open when you added it. <b>Move to tab</b> moves it.</li>
+      <li><b>Previews:</b> a PDF's first page, the first lines of office and text files, drawn by Mininotes itself.</li>
+      <li><b>Photos are made smaller</b> when added, so they travel light. Turn that off in <b>Settings</b>, <b>Pictures and files</b>.</li>
+      <li><b>Open a file</b> in its program: changes you save there come back into Mininotes and travel.</li>
+    </ul>
+
+    <h3 id="file-menu">A file's menu</h3>
+    <div class="how">
+      <p class="on"><span class="dev">Phone</span> Hold the file.</p>
+      <p class="on"><span class="dev">PC</span> Right-click the file.</p>
+    </div>
+    <p><b>Open in</b> its program, <b>Open with…</b>, <b>Rename…</b>, <b>Replace with another file…</b>, <b>Copy</b> (the file itself, to paste in another app), <b>Send with another app…</b> and <b>Choose several…</b> (phone), <b>Save on my computer…</b> or <b>Save on my phone…</b>, <b>Send to a device…</b>, <b>Stamp on Minima…</b>, <b>Move to another note…</b>, <b>Move to tab</b> and <b>Move to bin</b>.</p>
+
+    <h3 id="big-files">Big files</h3>
+    <p>Files from 16 MB up to 2 GB go with <b>Send to a device…</b>, only when the two devices can reach each other directly (on the same Wi-Fi, for example). The other side gets a notification with <b>Refuse</b> and <b>Save</b> (phone) or a box (PC). The file is saved into Downloads; it is not kept in the app. On the PC, a file over 25 MB that cannot be added to a note offers <b>Send to a device…</b> instead.</p>
+  </div>
+</section>
+
+<!-- ============================================================ PC FILES -->
+<section id="pc-files">
+  <div class="wrap">
+    <h2>Files on the PC</h2>
+    <p class="sub">On the PC only: files and folders that stay where they are on your disk, and still travel.</p>
+    <ul>
+      <li><b>Share a file through Mininotes…</b> (in <b>Sync and sharing</b>): the file stays where it is and opens in its own program. Each time you save it, that version goes to your devices. Its menu: <b>Linked to…</b>, <b>Open in…</b>, <b>Open with…</b>, <b>Show in Explorer</b>, "Synced with the file on this PC", and <b>Remove from Mininotes…</b>, which deletes nothing on disk. If it changed in two places, <b>Which version to keep…</b> asks you.</li>
+      <li><b>Sync a folder of this PC…</b>: everything in that folder shows in Mininotes, on a tile with arrows. Its menu: where it is on this PC, <b>Show in Explorer</b>, <b>Keep it inside only</b>, <b>Remove from the app</b>.</li>
+      <li><b>Save on my device…</b>: a note or a folder kept as Markdown files in a folder you choose. If a file is lost, <b>Find it…</b>; if both changed, <b>Keep Mininotes' words</b> or <b>Keep the file's words</b>.</li>
+      <li><b>Open a Markdown file…</b>, or drop a .md file anywhere but on a note: the note is kept in that file.</li>
+      <li><b>Edit a file…</b>: any text file in a simple window like Notepad. Nothing is kept or synced.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================ VERSIONS -->
+<section id="versions">
+  <div class="wrap">
+    <h2>Versions</h2>
+    <ul>
+      <li><b>Versions…</b>, in <b>This note</b>: read any earlier version, then <b>Put this back</b>. Putting one back is kept as a new version, so nothing is lost.</li>
+      <li>A hundred versions are kept per note, and your own newest 30 are always kept.</li>
+      <li>From the archive and the bin, <b>Put back</b> puts things back where they were.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================ BACKUPS -->
+<section id="backups">
+  <div class="wrap">
+    <h2>Backups</h2>
+    <p class="sub">Copies of your whole notebook, always sealed, made by themselves when you want: into a folder, or to another of your devices, such as your own server.</p>
+    <div class="how">
+      <p class="on"><span class="dev">Phone</span> <b>Settings</b>, <b>Backup</b>; or My profile, <b>Backup</b>; or menu, <b>Backup</b>, <b>Backups…</b>.</p>
+      <p class="on"><span class="dev">PC</span> The same three ways: the Backup part of <b>Settings…</b>, My profile, or <b>≡ Menu</b>, <b>Backup</b>, <b>Backups…</b>.</p>
+    </div>
+    <ul>
+      <li>Each place has its card, with <b>Back up now</b>, <b>Change…</b> and <b>Remove…</b>. Under them: <b>Add a place…</b> and <b>Add from a backup…</b>.</li>
+      <li><b>Where:</b> <b>A folder</b>, or one of your devices. A device gets the backup sealed, when it can be reached directly, and cannot open it. One that does not get there is tried again half an hour later, going on from where it stopped.</li>
+      <li><b>What:</b> <b>Everything</b>, or <b>Everything but the files</b>.</li>
+      <li><b>When:</b> only when you ask; each day, each week (on a day) or each month (on a day from 1 to 28), at an hour; or each time Mininotes closes (on the phone: when you leave it, at most once in 10 minutes).</li>
+      <li><b>How many:</b> the newest 1 to 50 are kept (5 unless you change it).</li>
+      <li><b>Always sealed:</b> with the notebook's lock, with a password for the backups, or with 12 words made for the backups (three of them are asked back, to be sure you wrote them down).</li>
+      <li>If nothing changed, the backup is skipped. A failed one is tried again after 30 minutes.</li>
+      <li>After 30 days without a backup, the bar reminds you.</li>
+      <li><b>Never in a backup:</b> private spaces, the Integritas key and the Agent conversation.</li>
+    </ul>
+    <figure class="ill" id="fig-backup">
+      <img src="assets/guide/14-backup-page.svg" width="600" height="500" loading="lazy"
+        alt="The Backup page on a phone with one folder card: Everything, each day at 20:00, keeps the newest 5, sealed with the lock, and the buttons Back up now, Change and Remove.">
+      <figcaption>The Backup page: one card per place, saying what, when, how many, and how it is sealed.</figcaption>
+    </figure>
+    <p><b>On the PC</b>, backups your other devices send to it are kept in <b>Documents, Mininotes backups</b>, each device in a folder of its own: <b>From your other devices</b>, on the Backup page, changes where.</p>
+    <p>Coming later: a key file, and backups for "this device only".</p>
+
+    <h3 id="own-server">Your own server</h3>
+    <p>A small Mininotes for a Linux server: always on, one of your devices, and it only keeps your sealed backups. It cannot open them. <b>Your own server…</b>, on the Backup page, shows the same steps.</p>
+    <ol class="steps">
+      <li><b>Install it.</b> On the server, as root:<br><code>curl -fsSL https://raw.githubusercontent.com/mininotesorg/server/main/install.sh | sudo bash</code><br>If your provider has a firewall of its own, open TCP port 9601 there too.</li>
+      <li><b>Pair it.</b> Run <code>sudo mininotes-server pair</code>. It shows a code and a link for 15 minutes. In Mininotes: <b>People and devices</b>, <b>+</b>, scan the code or <b>Paste a link</b>, then <b>One of my devices</b> and <b>Nothing yet</b>.</li>
+      <li><b>Back up to it.</b> <b>Backups…</b>, <b>Add a place…</b>, then the server under <b>Where</b>.</li>
+    </ol>
+    <p>It tells your devices that it only keeps backups, so they send it nothing else: no note, no Temp, nothing you share. <code>sudo mininotes-server status</code> lists what it keeps. <a href="https://github.com/mininotesorg/server">The full guide on GitHub</a>.</p>
+  </div>
+</section>
+
+<!-- ============================================================ AGENT -->
+<section id="agent">
+  <div class="wrap">
+    <h2>The Agent</h2>
+    <p class="sub">Ask it about Mininotes, or have it do simple things for you. It runs on your device, with no server.</p>
+    <div class="how">
+      <p class="on"><span class="dev">Phone</span> The Agent symbol beside ⋮, on Home, in folders and in notes.</p>
+      <p class="on"><span class="dev">PC</span> In the top bar, or <b>≡ Menu</b>, <b>Agent…</b>, or <kbd>Ctrl</kbd>+<kbd>K</kbd>.</p>
+    </div>
+    <ul>
+      <li>It answers from the help kept inside the app.</li>
+      <li>It does tasks said in English or French: "what is new?", "what is on my todo list?", "add milk to Groceries", "share Groceries with Ana", "add someone", open, find, a new note, the dock, favourites.</li>
+      <li>Before anything that changes a note or reaches other people, it shows you what it will do. <b>Take me there</b> goes to the right place.</li>
+      <li><b>New conversation</b> and <b>Full screen</b>. The conversation is kept 3 hours, locked with the notebook, and never while a private space is showing.</li>
+      <li>A press outside its box closes it. <span class="hid">Hidden</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================ STAMP -->
+<section id="stamp">
+  <div class="wrap">
+    <h2>Stamp on Minima</h2>
+    <p class="sub">Proof, on the Minima blockchain, that a note or a file existed exactly as it is, at that moment. Only its fingerprint leaves your device. It needs an <a href="https://integritas.technology">Integritas</a> account.</p>
+    <div class="how one">
+      <p class="on"><span class="dev">Phone and PC</span> <b>Stamp on Minima…</b>: one line in a note's or a file's menu, in <b>This note</b>, on an attachment's card, and for the ticked files in the PC's paperclip menu.</p>
+    </div>
+    <ul>
+      <li>The window shows the fingerprint (SHA-256) and the steps: <b>Stamp</b>, <b>Look for it on Minima</b>, <b>Verify again</b>, <b>Open this version</b>, <b>Open the PDF report</b>, <b>Attach the PDF report</b>, <b>Compare with a fingerprint…</b> and <b>Stamped before</b>.</li>
+      <li><b>A stamped note</b> has a line under its title: "Stamped on Minima", the date and the block; or "Changed since…" with <b>Stamp this version…</b>. A note's stamp covers its title, an empty line, then its text.</li>
+      <li><b>A stamped file</b> wears a small stamp on its icon.</li>
+      <li><b>Compare with a fingerprint…</b>: paste a SHA-256 and see whether it is the same. This works offline.</li>
+      <li><b>Stamped on Minima…</b>, last in <b>Find</b>, lists what was stamped. Its <b>+</b> stamps a note or a file, even a file from outside Mininotes.</li>
+      <li>Stamps travel to your devices and with a shared thing. Your API key goes in My profile, <b>Stamping</b>.</li>
+    </ul>
+    <figure class="ill" id="fig-stamp">
+      <img src="assets/guide/12-stamp-on-minima.svg" width="600" height="600" loading="lazy"
+        alt="The Stamp on Minima window for Contract.pdf, with its fingerprint, a green Stamped on Minima box with the date and block, and the list of steps; beside it a file icon with a small stamp and a note with its stamp line.">
+      <figcaption>The Stamp on Minima window; a stamped file and a stamped note.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============================================================ PRIVACY -->
+<section id="privacy">
+  <div class="wrap">
+    <h2>Privacy and the lock</h2>
+    <ul>
+      <li><b>No server, no account, no tracking.</b> Notes are kept on your devices and go only to the people and devices you choose.</li>
+      <li><b>Sealed end to end.</b> Every note and file is sealed for the device it goes to. See <a href="#under-the-hood">Under the hood</a>.</li>
+    </ul>
+    <h3 id="lock">Lock Mininotes</h3>
+    <div class="how">
+      <p class="on"><span class="dev">Phone</span> <b>Settings</b>, <b>Security</b>. It opens with your fingerprint or your screen lock.</p>
+      <p class="on"><span class="dev">PC</span> <b>Settings…</b>, <b>Security</b>. It opens with Windows Hello or your password.</p>
+    </div>
+    <ul>
+      <li>The lock encrypts the notebook, its files and your backups on the device.</li>
+      <li><b>12 recovery words</b> are a spare key: write them down and keep them somewhere safe.</li>
+      <li><b>Lock again when not used</b> locks it after a while.</li>
+      <li>Without the lock, notes are not encrypted on the device.</li>
+      <li>In private pages and password fields the keyboard is in incognito mode: it learns nothing.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================ PRIVATE SPACES -->
+<section id="private-spaces">
+  <div class="wrap">
+    <h2>Private spaces and the help request</h2>
+    <p class="sub">Spaces that nothing on the screen shows, opened with a code typed in a note. The codes are written here in words on purpose: typed into a note, the real code would act at once.</p>
+
+    <h3 id="private-space">A private space</h3>
+    <ul>
+      <li><b>Open or make one.</b> <span class="hid">Hidden</span> In any note, type the word private, then two slashes and a colon, then your password, all together with no spaces, and press Enter. The code leaves the note the moment the colon is typed, and a password box opens.</li>
+      <li><b>A new password</b>, typed twice, makes a new, empty space. Every password is its own separate space, and nothing anywhere records how many you have. Write each password down: nobody can recover a forgotten one, not even with the 12 recovery words.</li>
+      <li><b>Inside:</b> its own colour and a lock beside <b>Private</b>, so you always know where you are. The <b>+</b> makes notes, folders and files. The eye by the password shows it while you hold it. Back closes the space.</li>
+      <li><b>Delete this private space</b> is in its menu.</li>
+      <li>A space holds about 64 MB, stays on this device only, and closes after five minutes without use.</li>
+    </ul>
+    <figure class="ill" id="fig-private">
+      <img src="assets/guide/13-private-space.svg" width="600" height="520" loading="lazy"
+        alt="Three phone screens: in a note, the word private followed by labels standing for two slashes, a colon and the password; then a password box with an eye held by a finger; then the private space in its own violet colour, with a lock.">
+      <figcaption>The code, written here as labels; the password box; the private space with its own colour and lock.</figcaption>
+    </figure>
+
+    <h3 id="help-request">The help request</h3>
+    <p>A help request sends your location, and words you chose, to people you chose, the moment a private note is opened. It is for when someone might force you to open Mininotes. <span class="hid">Hidden</span></p>
+    <ul>
+      <li><b>Set one:</b> inside a private space, in one of its notes, type the word help, then two slashes and a colon, all together. A box asks who to tell and what to say.</li>
+      <li><b>Never shown again</b>, anywhere, once set: the box always opens empty.</li>
+      <li><b>Take them away:</b> type the word erase, then two slashes and a colon, in one of the space's notes. Every help request of that space is removed.</li>
+      <li>Mininotes asks for the phone's location permission for this, and the phone shows when it is used.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================ LANGUAGES -->
+<section id="languages">
+  <div class="wrap">
+    <h2>Languages and translation</h2>
+    <ul>
+      <li><b>Eleven languages:</b> English, French, German, Spanish, Italian, Portuguese, Russian, Chinese, Japanese, Hindi and Persian, which reads right to left. Change it from the <b>Language</b> row (see <a href="#language">Language</a>).</li>
+      <li><b>Translate…</b> a whole note from <b>This note</b>, or selected words: in the phone's selection bar, or with a right-click on the words on the PC. Then <b>Copy</b>, <b>Replace</b> or <b>Add as a tab</b>.</li>
+      <li>Translation runs on your device. A language pack is downloaded once, the first time it is needed; <b>Settings</b>, <b>Translation</b> lists them and removes them.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================ SETTINGS -->
+<section id="settings">
+  <div class="wrap">
+    <h2>Settings</h2>
+    <div class="how">
+      <p class="on"><span class="dev">Phone</span> The menu ⋮, <b>Settings</b>.</p>
+      <p class="on"><span class="dev">PC</span> <b>≡ Menu</b>, the Mininotes part, <b>Settings…</b>. Text size and descriptions are in My profile; <b>Direct connections</b> (the firewall) is on the PC only.</p>
+    </div>
+    <p>The phone's sections: <b>Language</b>, <b>Security</b>, <b>Sync</b>, <b>What the marks mean</b>, <b>View</b>, <b>Show on Home</b>, <b>Pictures and files</b>, <b>Writing colours</b>, <b>While the pad is closed</b>, <b>How notes travel</b> (Relays), <b>Updates</b> and <b>Backup</b>.</p>
+    <ul>
+      <li><b>Send changes:</b> <b>Right away</b>, after 3 s, 10 s, 30 s or 2 min, or <b>Off</b> (a note then goes when you tap its mark). <b>Sync automatically</b>.</li>
+      <li><b>Recent keeps</b>, <b>Shared with me goes to</b>, three Temp switches, <b>Text size of notes</b>, <b>Keyboard learns from my notes</b>.</li>
+      <li><b>Listen while the pad is closed</b>, <b>Keep listening while the phone sleeps</b>, <b>Let it say when a note arrives</b>.</li>
+      <li><b>Lock again when not used</b>, <b>Look for a newer version once a day</b>.</li>
+      <li><b>Relays:</b> public relays on or off, your own relays (host and port, up to 8), and <b>The same on all my devices</b>. Anyone can <a href="https://github.com/mininotesorg/relay">run their own relay</a>.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================ UPDATES -->
+<section id="updates">
+  <div class="wrap">
+    <h2>Updates</h2>
+    <ul>
+      <li>Mininotes looks once a day for a newer version (you can switch that off). <b>Update to v…</b> then appears in the menu, and on the PC an <b>Update</b> button in the bar.</li>
+      <li>The <b>version dot</b>: green, you have the newest; yellow, an update is out. A tap updates.</li>
+      <li>On the PC, an update that did not finish is said at the next start.</li>
+      <li>On the phone, Mininotes starts listening again by itself after a restart or an update.</li>
+      <li><b>Uninstall Mininotes…</b> (PC) offers a backup first, then keeps or deletes your notes, as you choose.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================ FEEDBACK -->
+<section id="feedback">
+  <div class="wrap">
+    <h2>Feedback</h2>
+    <ul>
+      <li><b>Feedback…</b>, in the Mininotes part of the menu, opens a filled-in issue on GitHub, under your own name. Nothing is posted for you.</li>
+      <li><b>Share the log</b> (phone) or <b>Show the log</b> (PC): the log is kept on the device only, and goes nowhere unless you send it.</li>
+      <li><b>Share Mininotes…</b> and <b>About…</b> are there too.</li>
+      <li>Or <a href="./#talk">talk to us on Parlons!</a>. A security problem goes privately to <a href="https://github.com/mininotesorg/mininotes/security/advisories/new">a security advisory</a>.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================ UNDER THE HOOD -->
+<section id="under-the-hood">
+  <div class="wrap">
+    <h2>Under the hood</h2>
+    <p class="sub">How your notes travel, and what keeps them yours. You need none of this to use Mininotes.</p>
+    <ol class="hood">
+      <li id="hood-no-server"><h3>No server</h3><p>Each Mininotes carries its own Maxima node, the peer-to-peer network of Minima. Nothing else has to be installed, and there is no Mininotes server in between.</p></li>
+      <li id="hood-sealing"><h3>How notes are sealed</h3><p>Each note is sealed for the one device it goes to, with a fresh key every time (P-256 key agreement, HKDF-SHA256, AES-256-GCM), and signed (ECDSA P-256). Whoever carries it can neither read it nor change it.</p></li>
+      <li id="hood-roads"><h3>Two roads: the direct door, then relays</h3><p>First the direct door: two devices on the same Wi-Fi find each other (a signed announcement on port 9601) and talk straight. Otherwise relays carry the sealed bytes: your own relays first, then public ones. "Only between my devices" uses no relay at all. <b>History…</b> says which road each thing took.</p></li>
+      <li id="hood-pow"><h3>Proof of work</h3><p>Every Maxima message carries a small proof of work, which costs a little processor time and battery. Much work went into sending less: only what changed, only when needed.</p></li>
+      <li id="hood-receipts"><h3>Receipts</h3><p>A thing counts as delivered only when the far device itself answers. Until then it is tried again after 1, 2, 4 and 8 minutes, then every quarter of an hour; devices that can be reached are checked every minute or two.</p></li>
+      <li id="hood-carriers"><h3>Carriers</h3><p>When one of your devices is off, a third device of yours can hold a sealed copy for it, which it cannot read. The PC keeps what comes for your phones, and the phones collect it from there.</p></li>
+      <li id="hood-merging"><h3>Merging</h3><p>Changes are counted, never timed, so a wrong clock changes nothing. Two people writing at once are merged line by line against the last text both had; where both changed the same lines, both are kept.</p></li>
+      <li id="hood-changes"><h3>Only changes travel</h3><p>Only the changed stretches of lines are sent, with a SHA-256 check. If anything does not match, the whole note is asked for again.</p></li>
+      <li id="hood-versions"><h3>Versions</h3><p>A hundred versions are kept per note, and your own newest 30 always survive.</p></li>
+      <li id="hood-invitations"><h3>Invitations</h3><p>Connecting and sharing are invitations, accepted or ignored. Codes are links that start with mininotes://pair/. A pasted code shows six digits to compare; a scanned one needs none. One person can have several devices, and your own devices introduce each other.</p></li>
+      <li id="hood-temp"><h3>Temp's clock travels</h3><p>A thing's time in Temp travels with it, so every device deletes it at the same moment.</p></li>
+      <li id="hood-files"><h3>Files</h3><p>Files are sent in pieces, offered at the direct door first. Over 16 MB they go only directly, in sealed pieces of 256 KB, with a pass valid for one day.</p></li>
+      <li id="hood-lock"><h3>The lock</h3><p>The notebook is an encrypted database (SQLCipher). Its keys are kept by the phone's Keystore or by Windows' own protection; the 12 words are a spare key. Phone and Windows cloud backups leave the app's storage out.</p></li>
+      <li id="hood-backups"><h3>Backups</h3><p>Always sealed, in .mnbackup files. Private spaces are never included.</p></li>
+      <li id="hood-private"><h3>Private spaces</h3><p>Nothing records how many there are. They are never synced, never written out as Markdown, and never in History.</p></li>
+      <li id="hood-integritas"><h3>Stamps</h3><p>Only the SHA-256 fingerprint leaves the device. It goes into a Minima transaction; the proof is the block, the date and the transaction. A PDF report is optional.</p></li>
+      <li id="hood-agent"><h3>The Agent</h3><p>It runs on the device, with no language model and no server. It answers from the help texts kept in the app.</p></li>
+      <li id="hood-translation"><h3>Translation</h3><p>The same engine as Firefox's translation (Bergamot), on the device. Language packs are downloaded once and checked.</p></li>
+      <li id="hood-previews"><h3>Previews</h3><p>Drawn by Mininotes itself (PDFBox, PdfRenderer), never by Windows' thumbnails, so no picture of your files is kept outside.</p></li>
+      <li id="hood-network"><h3>What uses the network</h3><p>The Maxima node; the daily look for a newer version; Integritas when you stamp; translation packs the first time they are needed. Nothing else.</p></li>
+      <li id="hood-never-leaves"><h3>What never leaves the device</h3><p>Private spaces. The log, unless you send it. What you say to the Agent. Each device's layout, dock and writing lines switch. A note or file goes only to the devices and people you chose.</p></li>
+      <li id="hood-listening"><h3>Listening while closed</h3><p>On the phone, a service with its own notification keeps listening when Mininotes is closed. Android's battery saving can slow it down.</p></li>
+      <li id="hood-faces"><h3>Faces and translations</h3><p>Icons come from the Lucide set; a picture on a thing is a small thumbnail of at most 32 KB. A test fails if any English phrase shows on a screen in another language.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============================================================ HIDDEN GESTURES -->
+<section id="hidden-gestures">
+  <div class="wrap">
+    <h2>Hidden gestures at a glance</h2>
+    <p class="sub">Everything marked <span class="hid">Hidden</span> in this guide, on one page.</p>
+    <figure class="ill" id="fig-pc-gestures">
+      <img src="assets/guide/15-pc-power-gestures.svg" width="600" height="630" loading="lazy"
+        alt="Four PC windows: Ctrl and Tab show the cards of Recent; Ctrl+click chooses several icons; an icon dragged out to the desktop is copied, or moved with Shift; a file dragged from Explorer onto Temp's card is kept in Temp.">
+      <figcaption>Four PC gestures: <kbd>Ctrl</kbd>+<kbd>Tab</kbd>, choosing several, dragging out, dropping onto Temp.</figcaption>
+    </figure>
+    <table class="hidden">
+      <thead><tr><th scope="col">Phone</th><th scope="col">PC</th></tr></thead>
+      <tbody>
+        <tr><th colspan="2" scope="rowgroup">Write</th></tr>
+        <tr><td data-label="Phone">Tap any empty line below the last one: the cursor goes there.</td><td data-label="PC">Click any empty line below the last one.</td></tr>
+        <tr><td data-label="Phone">The keyboard comes only on a tap or double tap; hold a word to select it without it.</td><td data-label="PC" class="na">Not on the PC.</td></tr>
+        <tr><td data-label="Phone">Hold the title: the note's menu.</td><td data-label="PC"><kbd>F2</kbd> on a note's icon renames it.</td></tr>
+        <tr><td data-label="Phone">Hold a tab: rename or remove. Hold, then carry: move it.</td><td data-label="PC">Right-click a tab: rename or remove. Drag it: move it.</td></tr>
+        <tr><td data-label="Phone">Hold a link: Copy link, Open link, Share link.</td><td data-label="PC">Right-click a link: Open link, Copy link.</td></tr>
+        <tr><td data-label="Phone">Two fingers zoom the whole screen, 1× to 4×.</td><td data-label="PC" class="na">Not on the PC.</td></tr>
+        <tr><td data-label="Phone">Bold, italic, underline marks are hidden on the page.</td><td data-label="PC">The same; <kbd>Ctrl</kbd>+<kbd>B</kbd>, <kbd>I</kbd>, <kbd>U</kbd>.</td></tr>
+
+        <tr><th colspan="2" scope="rowgroup">Home, folders, pages</th></tr>
+        <tr><td data-label="Phone">Hold an icon: its whole menu.</td><td data-label="PC">Right-click, Menu key or <kbd>Shift</kbd>+<kbd>F10</kbd>.</td></tr>
+        <tr><td data-label="Phone">Hold empty Home: Home's menu.</td><td data-label="PC">Right-click empty Home.</td></tr>
+        <tr><td data-label="Phone">Hold an icon, then move it: carry it. Strip at the top: Favourite, Temp, Archive, Bin, Share.</td><td data-label="PC">Drag it; the same strip.</td></tr>
+        <tr><td data-label="Phone">Onto a note: a new folder with both. Pause over a folder: it opens. Pause on ‹ name: up one level. Out of an open folder: the card steps aside.</td><td data-label="PC">The same, dragging.</td></tr>
+        <tr><td data-label="Phone">Swipe: pages above, below, to the sides.</td><td data-label="PC">Wheel, <kbd>Shift</kbd>+wheel, drag empty space, <kbd>Page Up</kbd>/<kbd>Down</kbd>, <kbd>Ctrl</kbd>+<kbd>Page Up</kbd>/<kbd>Down</kbd>.</td></tr>
+        <tr><td data-label="Phone">Carry an icon to an edge and hold: a new page.</td><td data-label="PC">Drag an icon to an edge and hold.</td></tr>
+        <tr><td data-label="Phone">Double tap empty Home: the main page.</td><td data-label="PC">Double-click empty Home, or <kbd>Ctrl</kbd>+<kbd>Home</kbd>.</td></tr>
+        <tr><td data-label="Phone">Pinch Home: all pages.</td><td data-label="PC"><kbd>Ctrl</kbd>+wheel.</td></tr>
+        <tr><td data-label="Phone">All pages showing, hold a page still, then carry it: pages swap.</td><td data-label="PC">All pages showing, drag a page.</td></tr>
+        <tr><td data-label="Phone">Swipe the dock sideways when it is full.</td><td data-label="PC">Wheel or the bar on the dock.</td></tr>
+        <tr><td data-label="Phone">Tap the app's name in Home's bar: My profile.</td><td data-label="PC">The logo: Home; on Home, My profile.</td></tr>
+        <tr><td data-label="Phone">Swipe in a large photo: next or previous.</td><td data-label="PC"><kbd>←</kbd> <kbd>→</kbd>, <kbd>Home</kbd>, <kbd>End</kbd>.</td></tr>
+        <tr><td data-label="Phone" class="na">Not on the phone.</td><td data-label="PC"><kbd>Ctrl</kbd>+click or <kbd>Shift</kbd>+click: several at once; <kbd>Esc</kbd> lets go.</td></tr>
+        <tr><td data-label="Phone" class="na">Not on the phone.</td><td data-label="PC">Keyboard on Home: <kbd>Tab</kbd>, arrows, <kbd>Enter</kbd>, <kbd>F2</kbd>, <kbd>Delete</kbd>, <kbd>Ctrl</kbd>+arrows, <kbd>Ctrl</kbd>+<kbd>N</kbd>, <kbd>Ctrl</kbd>+<kbd>W</kbd>, <kbd>Esc</kbd>.</td></tr>
+        <tr><td data-label="Phone" class="na">Not on the phone.</td><td data-label="PC"><kbd>Ctrl</kbd>+<kbd>V</kbd> on Home, a folder or Temp keeps the clipboard's picture or files there.</td></tr>
+        <tr><td data-label="Phone" class="na">Not on the phone.</td><td data-label="PC">Drag out to Explorer: a copy. With <kbd>Shift</kbd>: it moves.</td></tr>
+
+        <tr><th colspan="2" scope="rowgroup">Recent</th></tr>
+        <tr><td data-label="Phone">Swipe up from the dock, or tap the handle above it: the cards.</td><td data-label="PC"><kbd>Ctrl</kbd>+<kbd>Tab</kbd> (keep <kbd>Ctrl</kbd> held), or the button beside the search.</td></tr>
+        <tr><td data-label="Phone">Throw a card up: closed. Hold a card: Open, Close.</td><td data-label="PC">× or middle click closes; right-click: Close and the menu.</td></tr>
+
+        <tr><th colspan="2" scope="rowgroup">People, sharing, marks</th></tr>
+        <tr><td data-label="Phone">A person's page: Accept everything without asking.</td><td data-label="PC">The same.</td></tr>
+        <tr><td data-label="Phone">Hold a row in People and devices: its menu.</td><td data-label="PC">Right-click the row.</td></tr>
+        <tr><td data-label="Phone">Tap a round: the person's menu.</td><td data-label="PC">Rest the pointer on a round: role, where they stand, files still going.</td></tr>
+        <tr><td data-label="Phone">Hold a mark: the Share box.</td><td data-label="PC">Click the mark.</td></tr>
+        <tr><td data-label="Phone">Hold a line in New: Show where it is, Mark as seen.</td><td data-label="PC">Right-click the line.</td></tr>
+
+        <tr><th colspan="2" scope="rowgroup">Files, Agent, private spaces</th></tr>
+        <tr><td data-label="Phone" class="na">The phone's camera, straight in.</td><td data-label="PC">Take a photo: photos Windows Camera saves in the next minutes come into the note.</td></tr>
+        <tr><td data-label="Phone">A press outside the Agent's box closes it.</td><td data-label="PC">The same, with a click.</td></tr>
+        <tr><td data-label="Phone">In any note: the word private, two slashes and a colon, the password.</td><td data-label="PC">The same.</td></tr>
+        <tr><td data-label="Phone">In a private note: the word help, two slashes and a colon. The word erase, the same way, removes them.</td><td data-label="PC">The same.</td></tr>
+      </tbody>
+    </table>
+    <p class="center"><a href="#contents">Back to the contents</a></p>
+  </div>
+</section>
+
+</main>
+
+<a class="to-top" href="#contents">Contents</a>
+
+<footer>
+  <div class="wrap">
+    <span>Mininotes · built on <a href="https://minima.global">Minima</a></span>
+    <span><a href="./">Home</a> · <a href="https://github.com/mininotesorg/mininotes/blob/main/LICENSE">GPL-3.0</a> · <a href="https://github.com/mininotesorg/mininotes">Source</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

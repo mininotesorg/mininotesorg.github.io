@@ -1,0 +1,88 @@
+/* The guide: only what site.css does not already give. Same green, same paper, same type. */
+
+.guide-hero { padding: 40px 0 8px; }
+.guide-hero h1 { font-size: clamp(32px, 5vw, 46px); line-height: 1.12; margin: 0 0 14px; letter-spacing: -0.5px; }
+.guide-hero .lead { font-size: 19px; max-width: 38em; margin: 0 0 12px; opacity: .92; }
+.legend { display: flex; flex-wrap: wrap; gap: 10px 22px; align-items: center; font-size: 15px; color: var(--quiet); margin: 16px 0 0; }
+.legend p { margin: 0; }
+
+/* The contents, at the top; a small button at the foot of the screen brings it back. */
+.toc { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 22px 16px; margin-top: 24px; }
+.toc h2 { font-size: 20px; margin: 0 0 10px; letter-spacing: 0; }
+.toc ol { columns: 3 14em; column-gap: 28px; margin: 0; padding-left: 1.6em; font-size: 16px; }
+.toc li { break-inside: avoid; padding: 2px 0; }
+.to-top { position: fixed; right: 14px; bottom: 14px; z-index: 5; background: var(--paper); color: #1d2721; padding: 8px 15px;
+  border-radius: 999px; text-decoration: none; font-weight: 600; font-size: 14px; box-shadow: 0 6px 18px rgba(0,0,0,.28); }
+.to-top:hover { background: #fff; text-decoration: none; }
+
+.guide { overflow-wrap: anywhere; }
+.guide section { padding: 44px 0 6px; scroll-margin-top: 10px; }
+.guide h2 { scroll-margin-top: 10px; }
+.guide h3 { font-size: 21px; line-height: 1.3; margin: 30px 0 8px; scroll-margin-top: 10px; }
+.guide p, .guide li { max-width: 46em; }
+.guide ul { padding-left: 1.3em; margin: 8px 0 14px; }
+.guide li { margin: 5px 0; }
+.guide b { font-weight: 650; }
+
+/* Phone and PC side by side: how to reach a thing on each. */
+.how { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 12px 0 18px; max-width: 900px; }
+.how.one { grid-template-columns: 1fr; }
+.how .on { margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px; font-size: 16px; }
+.dev, .hid { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase;
+  border-radius: 999px; padding: 1px 9px; vertical-align: 2px; white-space: nowrap; line-height: 1.6; }
+.dev { color: #1f463a; background: var(--accent); margin-right: 8px; }
+.hid { color: #3a2a06; background: #f2c46d; margin: 0 2px; }
+
+kbd { font-family: inherit; font-size: .88em; background: rgba(245,241,230,.12); border: 1px solid var(--line);
+  border-bottom-width: 2px; border-radius: 5px; padding: 0 5px; white-space: nowrap; }
+
+/* The drawings: each its own panel, full width of the text, a caption under it. */
+figure.ill { margin: 22px 0 28px; max-width: 640px; }
+figure.ill img { display: block; width: 100%; height: auto; border-radius: 16px; }
+figure.ill figcaption { font-size: 15px; color: var(--quiet); margin-top: 8px; }
+
+.soon { margin: 14px 0 18px; max-width: 46em; }
+.soon p { margin: 6px 0 0; }
+
+/* Under the hood: numbered short paragraphs. */
+.hood { counter-reset: hood; list-style: none; padding: 0 !important; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.hood li { counter-increment: hood; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 14px 18px; margin: 0; max-width: none; }
+.hood li h3 { margin: 0 0 4px; font-size: 18px; }
+.hood li p { margin: 0; color: var(--quiet); font-size: 16px; }
+
+/* Hidden gestures: Phone | PC. */
+table.hidden { width: 100%; border-collapse: collapse; font-size: 15.5px; margin-top: 14px; }
+table.hidden th, table.hidden td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+table.hidden thead th { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--quiet); }
+table.hidden tbody th { padding-top: 20px; font-size: 16px; color: var(--accent); border-bottom-color: rgba(185,220,201,.5); }
+table.hidden td { width: 50%; }
+.na { color: var(--quiet); }
+
+@media (max-width: 760px) {
+  .how, .hood { grid-template-columns: 1fr; }
+  .guide-hero { padding-top: 28px; }
+}
+@media (max-width: 600px) {
+  table.hidden thead { display: none; }
+  table.hidden tr, table.hidden td, table.hidden tbody th { display: block; width: auto; }
+  table.hidden tr { border-bottom: 1px solid var(--line); padding: 4px 0; }
+  table.hidden td { border: 0; padding: 4px 4px; }
+  table.hidden td::before { content: attr(data-label); display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .05em;
+    text-transform: uppercase; color: #1f463a; background: var(--accent); border-radius: 999px; padding: 0 8px; margin-right: 8px; }
+  .wrap { padding: 0 16px; }
+}
+
+@media print {
+  :root { --ink: #111; --quiet: #333; --line: #bbb; --card: transparent; --on-ground: #111; --accent: #285646; }
+  body, .bar, footer { background: #fff; color: #111; }
+  a, .brand, .bar nav a, footer a { color: #111; }
+  .bar nav, .to-top { display: none; }
+  .guide section { padding: 18px 0 4px; }
+  figure.ill, .how, .hood li, table.hidden tr { break-inside: avoid; }
+  .dev { background: #dfeee6; }
+  .toc ol { columns: 2; }
+}
+
+/* A command line wraps on a phone rather than pushing the page sideways. */
+#backups code { overflow-wrap: anywhere; word-break: break-all; }

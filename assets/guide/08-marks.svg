@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 590" width="600" height="590" role="img" aria-labelledby="tt dd">
+<title id="tt">The six marks, and the Waiting to go box</title>
+<desc id="dd">Six marks: a grey ring, only here; an amber arrow, waiting to go; three amber dots, sent and waiting for an answer; a green tick, everybody has it; two grey bars, paused; a red exclamation mark, a device not reached for over three days. Tapping the amber arrow opens the Waiting to go box: a Devices card with Laptop, 2 notes and 1 file, and Tablet, 1 note; What waits: Groceries and Trip to Lyon; and a Send now button.</desc>
+<style>
+text{font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif}
+.lbl{fill:#f5f1e6;font-size:18px}
+.lblb{fill:#f5f1e6;font-size:18px;font-weight:700}
+.lbls{fill:#f5f1e6;font-size:16px}
+.t{fill:#1d2721;font-size:14px}
+.ts{fill:#1d2721;font-size:12px}
+.tsb{fill:#1d2721;font-size:12px;font-weight:700}
+.tb{fill:#1d2721;font-size:15px;font-weight:700}
+.tq{fill:#5b665f;font-size:12px}
+.tl{fill:#1d2721;font-size:11px}
+.tw{fill:#fff;font-size:12px;font-weight:700}
+.tc{fill:#f5f1e6;font-size:13px}
+.tcb{fill:#f5f1e6;font-size:14px;font-weight:700}
+.tg{fill:#285646;font-size:12px;font-weight:700}
+.tr{fill:#c0392b;font-size:12px}
+.mono{font-family:ui-monospace,Consolas,'Cascadia Mono',monospace;fill:#1d2721;font-size:12px}
+.body{fill:#173a2f;stroke:#f5f1e6;stroke-opacity:.5;stroke-width:2}
+.rule{stroke:#d9e3dc;stroke-width:1.5}
+.box{fill:#fff;stroke:#c3cdc6;stroke-width:1.5}
+.shadow{fill:#000;fill-opacity:.18}
+.ges{stroke:#e8743b;stroke-width:3.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.gesd{stroke:#e8743b;stroke-width:2.5;fill:none;stroke-dasharray:6 5}
+.touch{fill:#e8743b;fill-opacity:.3;stroke:#e8743b;stroke-width:2.5}
+.ring2{fill:none;stroke:#e8743b;stroke-width:2;stroke-opacity:.6}
+.skin{fill:#fde3cf;stroke:#1d2721;stroke-width:2}
+.lit{fill:#e8743b;fill-opacity:.18;stroke:#e8743b;stroke-width:2.5}
+.ghost{fill:none;stroke:#5b665f;stroke-width:1.8;stroke-dasharray:5 4}
+.call{stroke:#f5f1e6;stroke-opacity:.8;stroke-width:1.5;fill:none}
+.dot{fill:#e8743b;stroke:#fff;stroke-width:1.5}
+</style>
+<rect width="600" height="590" rx="16" fill="#33604f"/>
+<circle cx="100" cy="52" r="26" fill="#fbf9f3"/><circle cx="100" cy="52" r="11.2" fill="none" stroke="#8a948e" stroke-width="2.4"/><text x="100" y="104" class="lbls" text-anchor="middle">Only here</text><circle cx="300" cy="52" r="26" fill="#fbf9f3"/><path d="M300 64.8V41.5M290.7 50.5L300 40.3L309.3 50.5" fill="none" stroke="#c98a0c" stroke-width="3.9" stroke-linecap="round" stroke-linejoin="round"/><text x="300" y="104" class="lbls" text-anchor="middle">Waiting to go</text><circle cx="500" cy="52" r="26" fill="#fbf9f3"/><circle cx="489.8" cy="52" r="3" fill="#c98a0c"/><circle cx="500" cy="52" r="3" fill="#c98a0c"/><circle cx="510.2" cy="52" r="3" fill="#c98a0c"/><text x="500" y="104" class="lbls" text-anchor="middle">Sent, waiting</text><text x="500" y="124" class="lbls" text-anchor="middle">for an answer</text><circle cx="100" cy="170" r="26" fill="#fbf9f3"/><path d="M89.2 170.3L96.7 177.8L111.4 161.6" fill="none" stroke="#2f8a5b" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/><text x="100" y="222" class="lbls" text-anchor="middle">Everybody has it</text><circle cx="300" cy="170" r="26" fill="#fbf9f3"/><rect x="292.5" y="161" width="4.5" height="18" rx="1" fill="#8a948e"/><rect x="303" y="161" width="4.5" height="18" rx="1" fill="#8a948e"/><text x="300" y="222" class="lbls" text-anchor="middle">Paused</text><circle cx="500" cy="170" r="26" fill="#fbf9f3"/><line x1="500" y1="159.5" x2="500" y2="173" stroke="#c0392b" stroke-width="4.5" stroke-linecap="round"/><circle cx="500" cy="179.9" r="2.6" fill="#c0392b"/><text x="500" y="222" class="lbls" text-anchor="middle">A device not reached</text><text x="500" y="242" class="lbls" text-anchor="middle">for over 3 days</text><circle cx="300" cy="52" r="34" class="gesd"/><path d="M300 92Q250 200 166.3 287.4" class="ges"/><polygon points="160,294 163.8,279.7 174.2,289.6" fill="#e8743b"/><text x="262" y="262" class="lblb">Tap it</text><rect x="94" y="306" width="420" height="270" rx="14" class="shadow"/><rect x="90" y="300" width="420" height="270" rx="14" fill="#fbf9f3"/><text x="108" y="332" class="tb">Waiting to go</text><rect x="106" y="346" width="388" height="96" rx="10" fill="#fff" stroke="#c3cdc6" stroke-width="1.3"/><text x="118" y="368" class="tsb">Devices</text><path d="M126 396.8V384.4M121 389.2L126 383.8L131 389.2" fill="none" stroke="#c98a0c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><text x="142" y="394" class="ts">Laptop</text><text x="480" y="394" class="tq" text-anchor="end">2 notes, 1 file</text><path d="M126 424.8V412.4M121 417.2L126 411.8L131 417.2" fill="none" stroke="#c98a0c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><text x="142" y="422" class="ts">Tablet</text><text x="480" y="422" class="tq" text-anchor="end">1 note</text><text x="108" y="470" class="tsb">What waits</text><text x="118" y="494" class="ts">Groceries</text><text x="118" y="516" class="ts">Trip to Lyon</text><rect x="380" y="520" width="112" height="34" rx="8" fill="#285646"/><text x="436" y="541.5" class="tw" text-anchor="middle">Send now</text>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 480" width="600" height="480" role="img" aria-labelledby="tt dd">
+<title id="tt">Writing below the last line</title>
+<desc id="dd">A note called Groceries with Milk, Bread and Apples. A finger taps an empty ruled line well below the last one and the cursor appears there. Nothing is written until you type, and what you type is saved as you go.</desc>
+<style>
+text{font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif}
+.lbl{fill:#f5f1e6;font-size:18px}
+.lblb{fill:#f5f1e6;font-size:18px;font-weight:700}
+.lbls{fill:#f5f1e6;font-size:16px}
+.t{fill:#1d2721;font-size:14px}
+.ts{fill:#1d2721;font-size:12px}
+.tsb{fill:#1d2721;font-size:12px;font-weight:700}
+.tb{fill:#1d2721;font-size:15px;font-weight:700}
+.tq{fill:#5b665f;font-size:12px}
+.tl{fill:#1d2721;font-size:11px}
+.tw{fill:#fff;font-size:12px;font-weight:700}
+.tc{fill:#f5f1e6;font-size:13px}
+.tcb{fill:#f5f1e6;font-size:14px;font-weight:700}
+.tg{fill:#285646;font-size:12px;font-weight:700}
+.tr{fill:#c0392b;font-size:12px}
+.mono{font-family:ui-monospace,Consolas,'Cascadia Mono',monospace;fill:#1d2721;font-size:12px}
+.body{fill:#173a2f;stroke:#f5f1e6;stroke-opacity:.5;stroke-width:2}
+.rule{stroke:#d9e3dc;stroke-width:1.5}
+.box{fill:#fff;stroke:#c3cdc6;stroke-width:1.5}
+.shadow{fill:#000;fill-opacity:.18}
+.ges{stroke:#e8743b;stroke-width:3.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.gesd{stroke:#e8743b;stroke-width:2.5;fill:none;stroke-dasharray:6 5}
+.touch{fill:#e8743b;fill-opacity:.3;stroke:#e8743b;stroke-width:2.5}
+.ring2{fill:none;stroke:#e8743b;stroke-width:2;stroke-opacity:.6}
+.skin{fill:#fde3cf;stroke:#1d2721;stroke-width:2}
+.lit{fill:#e8743b;fill-opacity:.18;stroke:#e8743b;stroke-width:2.5}
+.ghost{fill:none;stroke:#5b665f;stroke-width:1.8;stroke-dasharray:5 4}
+.call{stroke:#f5f1e6;stroke-opacity:.8;stroke-width:1.5;fill:none}
+.dot{fill:#e8743b;stroke:#fff;stroke-width:1.5}
+</style>
+<rect width="600" height="480" rx="16" fill="#33604f"/>
+<rect x="40" y="24" width="230" height="430" rx="30" class="body"/><rect x="137" y="29" width="36" height="4" rx="2" fill="#f5f1e6" fill-opacity=".35"/><clipPath id="c1"><rect x="50" y="38" width="210" height="402" rx="20"/></clipPath><rect x="50" y="38" width="210" height="402" rx="20" fill="#fbf9f3"/><g clip-path="url(#c1)"><text x="62" y="70" class="tb">←</text><text x="86" y="70" class="tb">Groceries</text><circle cx="242" cy="59" r="1.8" fill="#1d2721"/><circle cx="242" cy="65" r="1.8" fill="#1d2721"/><circle cx="242" cy="71" r="1.8" fill="#1d2721"/><line x1="60" y1="130" x2="250" y2="130" stroke="#d9e3dc" stroke-width="1.4" stroke-linecap="round"/><text x="66" y="122" class="t">Milk</text><line x1="60" y1="160" x2="250" y2="160" stroke="#d9e3dc" stroke-width="1.4" stroke-linecap="round"/><text x="66" y="152" class="t">Bread</text><line x1="60" y1="190" x2="250" y2="190" stroke="#d9e3dc" stroke-width="1.4" stroke-linecap="round"/><text x="66" y="182" class="t">Apples</text><line x1="60" y1="220" x2="250" y2="220" stroke="#d9e3dc" stroke-width="1.4" stroke-linecap="round"/><line x1="60" y1="250" x2="250" y2="250" stroke="#d9e3dc" stroke-width="1.4" stroke-linecap="round"/><line x1="60" y1="280" x2="250" y2="280" stroke="#d9e3dc" stroke-width="1.4" stroke-linecap="round"/><line x1="60" y1="310" x2="250" y2="310" stroke="#d9e3dc" stroke-width="1.4" stroke-linecap="round"/><line x1="60" y1="340" x2="250" y2="340" stroke="#d9e3dc" stroke-width="1.4" stroke-linecap="round"/><line x1="60" y1="370" x2="250" y2="370" stroke="#d9e3dc" stroke-width="1.4" stroke-linecap="round"/><line x1="60" y1="400" x2="250" y2="400" stroke="#d9e3dc" stroke-width="1.4" stroke-linecap="round"/><line x1="60" y1="430" x2="250" y2="430" stroke="#d9e3dc" stroke-width="1.4" stroke-linecap="round"/><rect x="66" y="316" width="2.5" height="20" fill="#285646"/></g><g transform="translate(170 326)"><circle cx="0" cy="0" r="12" class="touch"/><g transform="rotate(-25)"><rect x="-9.5" y="-2" width="19" height="62" rx="9.5" class="skin"/><rect x="-5.5" y="1.5" width="11" height="11" rx="4.5" fill="#fff" fill-opacity=".75"/><line x1="-5.5" y1="30" x2="5.5" y2="30" stroke="#1d2721" stroke-width="1.2" stroke-linecap="round" stroke-opacity=".35"/></g></g><circle cx="313" cy="74" r="13" fill="#b9dcc9"/><text x="313" y="79" text-anchor="middle" fill="#285646" style="font-size:15px;font-weight:700">1</text><text x="333" y="80" class="lblb">Tap any empty line</text><text x="333" y="106" class="lbls">About a screen of ruled paper</text><text x="333" y="127" class="lbls">waits below the last line.</text><circle cx="313" cy="180" r="13" fill="#b9dcc9"/><text x="313" y="185" text-anchor="middle" fill="#285646" style="font-size:15px;font-weight:700">2</text><text x="333" y="186" class="lblb">The cursor goes there</text><text x="333" y="212" class="lbls">Nothing is written until</text><text x="333" y="233" class="lbls">you type.</text><circle cx="313" cy="286" r="13" fill="#b9dcc9"/><text x="313" y="291" text-anchor="middle" fill="#285646" style="font-size:15px;font-weight:700">3</text><text x="333" y="292" class="lblb">Type: it is saved</text><text x="333" y="318" class="lbls">There is no save button.</text><text x="333" y="339" class="lbls">On the PC, Ctrl+S saves</text><text x="333" y="360" class="lbls">at once if you like.</text>
+</svg>
