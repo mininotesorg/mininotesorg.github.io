@@ -113,14 +113,18 @@
 
 <section id="talk">
   <div class="wrap">
-    <div class="contact">
-      <div>
-        <h2>Talk to us on Parlons!</h2>
-        <p class="sub">The private chat that runs over Maxima too. <a href="https://parlons.info">Install Parlons!</a>, then connect with Mininotes:</p>
-        <span class="address" id="parlons-address">MxG18HGG6FJ038614Y8CW46US6G20810K0070CD00Z83282G60G1EU51F6ZKUN2SH9A77ZT30BM1M3PK3878A0S5TTTF97AJC5MGWB1U7CJWZVF1KQG2TEG6W7Y0D3NHUVYC423H85C23RAHCMMUEU2K5JVTA2EM7UBNJBW4RED0KW1HAT7PEAGRGR1ETEVTAWC7F2TGBAZNQPA4RR5P9YVQG0A6JZP5CKR9QVH9MMMSQFUQDDWCKT8TW54Q8555C10608007NRNASR@78.141.237.9:9501</span>
-        <p class="note">Or on <a href="https://github.com/mininotesorg/mininotes/issues">GitHub</a>.</p>
-      </div>
+    <h2>Talk to us on Parlons!</h2>
+    <p class="sub">The private chat that runs over Maxima too. <a href="https://parlons.info">Install Parlons!</a>, then scan this code with it to connect with Mininotes.</p>
+    <!-- The code first, the address only as its beginning and end with Copy beside it (the owner, 2026-11-07). -->
+    <div class="talk">
       <img class="qr" src="assets/parlons-qr.png" alt="The Mininotes Parlons! address as a QR code">
+      <div class="handle">
+        <p class="note">On the same phone, copy the address instead:</p>
+        <div class="copyline">
+          <span class="address short" id="parlons-address" title="The whole address is copied">MxG18HGG6F…NRNASR@78.141.237.9:9501</span>
+          <button type="button" class="button copy" id="copy-parlons" data-copy="MxG18HGG6FJ038614Y8CW46US6G20810K0070CD00Z83282G60G1EU51F6ZKUN2SH9A77ZT30BM1M3PK3878A0S5TTTF97AJC5MGWB1U7CJWZVF1KQG2TEG6W7Y0D3NHUVYC423H85C23RAHCMMUEU2K5JVTA2EM7UBNJBW4RED0KW1HAT7PEAGRGR1ETEVTAWC7F2TGBAZNQPA4RR5P9YVQG0A6JZP5CKR9QVH9MMMSQFUQDDWCKT8TW54Q8555C10608007NRNASR@78.141.237.9:9501">Copy</button>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -160,6 +164,15 @@
       line.textContent=said+" · ";link.textContent="all releases on GitHub";line.appendChild(link);
     })
     .catch(function(){});
+</script>
+<script>
+  // Copy: the whole Parlons! address, though only its beginning and end are shown.
+  (function(){var b=document.getElementById('copy-parlons');if(!b)return;
+    b.addEventListener('click',function(){var t=b.getAttribute('data-copy');
+      function done(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy';},2000);}
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,function(){old(t);done();});}else{old(t);done();}
+      function old(x){var a=document.createElement('textarea');a.value=x;a.style.position='fixed';a.style.opacity='0';document.body.appendChild(a);a.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(a);}
+    });})();
 </script>
 <script src="assets/header.js"></script>
 </body>
