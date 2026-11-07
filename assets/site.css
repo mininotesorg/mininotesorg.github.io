@@ -120,7 +120,8 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
 @media (max-width: 760px) {
   .hero { padding: 36px 0 48px; }
   .hero .wrap, .two, .contact { grid-template-columns: 1fr; }
-  .grid { grid-template-columns: 1fr; }
+  /* .grid.three too: it outranked .grid, so the three cards stayed side by side on a phone (the owner, 2026-11-07). */
+  .grid, .grid.three { grid-template-columns: 1fr; }
   .bar nav { gap: 14px; }
   .qr { width: 180px; }
 }
