@@ -120,6 +120,12 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
 @media (max-width: 760px) {
   .hero { padding: 36px 0 48px; }
   .hero .wrap, .two, .contact { grid-template-columns: 1fr; }
+  /* On a phone, the app seen first and the downloads under it (the owner, 2026-11-07: "put the download buttons under the
+     animation of the app"): the column's parts placed one by one, the phone between the words and the buttons. */
+  .hero .wrap { row-gap: 0; }
+  .hero .wrap > div { display: contents; }
+  .hero figure.phone { order: 1; margin: 4px auto 32px; }
+  .hero .choices, .hero p.small { order: 2; }
   /* .grid.three too: it outranked .grid, so the three cards stayed side by side on a phone (the owner, 2026-11-07). */
   .grid, .grid.three { grid-template-columns: 1fr; }
   .bar nav { gap: 14px; }
