@@ -121,6 +121,7 @@ code, .address {
 
 footer { background: var(--ground); color: var(--on-ground); padding: 28px 0; font-size: 15px; }
 footer a { color: var(--on-ground); }
+footer .github { display: inline-flex; vertical-align: middle; margin-left: 6px; }
 footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
 
 @media (max-width: 760px) {
