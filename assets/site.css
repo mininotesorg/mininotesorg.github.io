@@ -59,6 +59,7 @@ header.bar.away { transform: translateY(-100%); }
 .button.plain { background: transparent; color: var(--on-ground); border-color: rgba(245,241,230,.45); }
 .button.plain:hover { border-color: var(--on-ground); background: rgba(245,241,230,.08); }
 .small { font-size: 14px; opacity: .8; margin-top: 14px; }
+.initiative { font-size: 15px; opacity: .85; margin-top: -4px; }
 
 /* The ruled page, drawn: what the app looks like, without a screenshot */
 .pad {
